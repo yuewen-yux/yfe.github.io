@@ -5,18 +5,18 @@
   
 
   
-  <title>tags | YUX BLOG</title>
+  <title>tags | YFE BLOG</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="tags">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
-<meta property="og:site_name" content="YUX BLOG">
+<meta property="og:site_name" content="YFE BLOG">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-05-22T07:51:07.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
   
-    <link rel="alternate" href="/atom.xml" title="YUX BLOG" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="YFE BLOG" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,6 +33,7 @@
       <header id="header">
   <div id="header-outer" class="outer">
     <div id="header-inner" class="inner">
+      <a id="logo" href="/">&lt;YFE /&gt;</a>
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
@@ -54,10 +55,6 @@
         <h2 class="customs-tags-title"> Tags </h2>
         <div class="customs-tags">
             <a href="/tags/apm/" style="font-size: 10px;">apm</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/flutter/" style="font-size: 10px;">flutter</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/http2/" style="font-size: 10px;">http2</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/pwa/" style="font-size: 10px;">pwa</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/rn/" style="font-size: 10px;">rn</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a>
-            <a href></a>
-            <a href></a>
-            <a href></a>
-            <a href></a>
         </div>
     </div>
 <style>
@@ -68,28 +65,55 @@
         font-size: 2em;
         font-weight: bold;
         color: #555;
+        font-family:"Trebuchet MS";
     }
     .customs-tags {
-        font-size: 0;
-        text-align: center;
     }
     .customs-tags a {
         display: inline-block;
-        width: 50%;
-        max-width: 224px;
-        box-shadow:  0 0 2px #3385ff;
-        color: #3385ff;
-        margin-bottom: 10px;
-        margin-right: 1px;
-        margin-left: -1px;
-        font-size: 22px!important;
-        line-height: 1.6;
-        text-decoration: none;
-        text-align: center;
-    }
-    .customs-tags a:hover {
         background: #3385ff;
         color: #FFF;
+        padding: 5px 10px;
+        margin: 10px 2px 10px 20px;
+        position: relative;
+        box-shadow: 0 1px 0 rgba(0,0,0,.2);
+        -webkit-transform-origin: 0% 50%;
+        -webkit-animation: swing 1s;
+        -o-animation: swing 1s;
+        animation: swing 1s;
+        text-decoration: none;
+        font-size: 12px!important;
+        height: 17px;
+    }
+    .customs-tags a:before{
+        content: "";
+        position: absolute;
+        width: 0;
+        background: inherit;
+        height: 8px;
+        border: 10px solid #fafafa;
+        border-right-color: transparent;
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        border-radius: 10px 0 0 10px;
+        left: -20px;
+        top: 0;
+    }
+    .customs-tags a:after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        background: #FFF;
+        position: absolute;
+        left: -3px;
+        top: 11px;
+        box-shadow: inset 1px 1px 0 #CCC;
+    }
+    .customs-tags a:hover {
+        text-decoration: underline;
     }
 </style>
 
@@ -136,17 +160,14 @@
             <div class="footer-grid">
                 <div class="footer-grid-col">
                     <div class="footer-items">
-                    <a class="footer-item" href="/">主页</a>
-                    <a class="footer-item" href="/archives/">归档</a>
                     <a class="footer-item" href>GITHUB</a>
                     <a class="footer-item" href>掘金</a>
+                    <a class="footer-item" href>知乎</a>
+                    <a class="footer-item" href>微信公众号</a>
                     </div>
                 </div>
                 <div class="footer-grid-col">
-                    <a class="footer-logo" href="/">
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIgAAACICAMAAAALZFNgAAAAmVBMVEUAAAD////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VHQRUAAAAMnRSTlMA1NOvAckFnpg1+9h8Zk1FJ3D38c7EraKSWx0KdrWQh2tgLxoVD6ZWv7o+OiLn5lP65IqlyCgAAAN5SURBVHja7drZcuowDAZgt2SBQBJ2KFvZukI3vf/DncFyUdAc4l4okzOn+m+qdlL3A2JHcWrgH4lCFKIQhShEISwK4VEIj0J4FMKjEB6F8CiERyE8CuFRCI9CeBTCoxCeXw45mlO2YLO13xztL9vcAsANlnBKbsuclSKQ1Ni8n+p3rNPrkI4tH07lgy07YpCxsYlPdYz1+DpkiXUboI3VUgwyCOyAd6f6zpbB4DpkgPUEYELHykDgYEfcn8q9LQ9wHQJdW68B1rboghykY2yGAEOsOmWQja1bAC1bbAQhI2NzD3CP1agM0rR1lCSRLZqCkARP/wwgwymRlEFCd7a28WsoCIHs+yTZO1EZZOAmlptsA0nI9PJFTkshMMMPEj/GGUhCHCCOHagckuNsx5mey0FojUxTWjVLID2cNjhperKQV1wScIl49UBw2sznOGnkIPQigwBfpAfybAp5loVMTCETD+TLFPIlC7k1hdx6IElAxwaJLCSZ09jzxAOBPR28l+7QWjR2C3yQLR28lYakNHbqheR0cC4NadLYTS9kQwdvpCEhjR16IR06uCMN6QfnedD3QqYEmUpDYGdcduCFxASJpSE0bVp+yCNBHsUhH8blyQ9pEKQhDukZl54f8kKQF3HIyris/JARQUbikLFxGfshQ4IMpSG0kIR+SJsgbXHIu3F580NuCHIjDoHI2ERQ80cDR2Nz9ED49UAe8mqoYa1z1kBmbDIPhDWtz/KQJ1pYa1zQqMnY/ACyJMhSHrI2Nmuo9aJHF5vFDyArgqzkIR1quers0M57NPceCO+05SEreq99kA+CfMhDmtTD+yAHghzkIRO68fVBugTpykPG1I74IMX7U2EINaINP+TNFPJWI2RUhIxqhMTYuGADE9cIWRT3uRY1Qeg6nWV4ta4RssW3At+YbU0Q2l2aTGh/qWJIdO5Kw3NfTaowpD6+YsjsfDYuirvdsXte5J43xdVDMvyL6WMaUDtLz4voCVLVkNhcJi5uYNx9P3ZrVQ/pzy4cM9xK+oy+t4qmtog+K4fAMjCUYHlxmxee77OG1UNgGpBjetG3RH2APj1LqxoCjZ1z7M4/pzODzpbqIdBv5rtolzf7bFL3qPGf/X//pPCXKIRHITwK4VEIj0J4FMKjEB6F8CiERyE8CuFRCI9CeBTCoxAehfAopPL8AcfmfMqqNjeTAAAAAElFTkSuQmCC">
-                    </a>
-                    <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YUX FE All Rights Reserved</p>
+                    <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YFE All Rights Reserved</p>
                     <p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
                 </div>
 

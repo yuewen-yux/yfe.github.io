@@ -1,4 +1,14 @@
 (function($){
+
+  var urlPath = location.pathname;
+  if(urlPath === '/') {
+    $('#main-nav').find('.main-nav-link').eq(0).addClass('cur')
+  } else if(urlPath === '/archives/') {
+    $('#main-nav').find('.main-nav-link').eq(1).addClass('cur')
+  } else if(urlPath === '/tags/') {
+    $('#main-nav').find('.main-nav-link').eq(2).addClass('cur')
+  }
+
   // Search
   var $searchWrap = $('#search-form-wrap'),
     isSearchAnim = false,
@@ -126,6 +136,13 @@
 
     startMobileNavAnim();
     $container.toggleClass('mobile-nav-on');
+    if(urlPath === '/') {
+      $('#mobile-nav').find('.mobile-nav-link').eq(0).addClass('cur')
+    } else if(urlPath === '/archives/') {
+      $('#mobile-nav').find('.mobile-nav-link').eq(1).addClass('cur')
+    } else if(urlPath === '/tags/') {
+      $('#mobile-nav').find('.mobile-nav-link').eq(2).addClass('cur')
+    }
     stopMobileNavAnim();
   });
 
