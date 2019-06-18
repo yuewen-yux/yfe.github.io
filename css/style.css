@@ -392,6 +392,18 @@ body {
     float: right;
   }
 }
+#logo-txt {
+  float: left;
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 1.5em;
+  line-height: 60px;
+}
+@media screen and (max-width: 479px) {
+  #logo-txt {
+    display: none;
+  }
+}
 #subtitle {
   font-size: 16px;
   line-height: 16px;
@@ -1034,6 +1046,11 @@ a.article-title:hover {
 .archive-article-inner {
   padding: 10px;
   margin-bottom: 15px;
+}
+.archive-article-inner h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .archive-article-title {
   text-decoration: none;
