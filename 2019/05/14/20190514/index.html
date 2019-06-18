@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>关于 AMP，Webnovel 都做了些什么？ | YFE BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="引言AMP 是什么？它全称 Accelerated Mobile Pages 「AMP」，是 Google 推出的一个加速网页加载的开源框架，我们在此也不做太多的介绍，具体可以看我们之前发的公众号文章。阅文前端团队作为国内最早践行 AMP 的开发团队之一，我们的 AMP 实践也经历了好几个大迭代，其成果也得到了 Google 官方的肯定，分别在 Google I/O 2019 和  AMP Con">
+<meta name="keywords" content="AMP,Webnovel,Google">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于 AMP，Webnovel 都做了些什么？">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/20190514/index.html">
+<meta property="og:site_name" content="YFE BLOG">
+<meta property="og:description" content="引言AMP 是什么？它全称 Accelerated Mobile Pages 「AMP」，是 Google 推出的一个加速网页加载的开源框架，我们在此也不做太多的介绍，具体可以看我们之前发的公众号文章。阅文前端团队作为国内最早践行 AMP 的开发团队之一，我们的 AMP 实践也经历了好几个大迭代，其成果也得到了 Google 官方的肯定，分别在 Google I/O 2019 和  AMP Con">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c9a9172d0?w=1920&h=1237&f=png&s=1499444">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c3025c747?w=1920&h=870&f=png&s=604565">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c7ae64262?w=1636&h=1002&f=png&s=130366">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2cafbeed13?w=1686&h=1558&f=png&s=149216">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c4585f98a?w=599&h=445&f=gif&s=4545039">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c54c4abdc?w=448&h=600&f=gif&s=5499945">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2d7aff9516?w=1662&h=186&f=png&s=32076">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2db694ce19?w=690&h=340&f=png&s=26094">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2fce0abb02?w=338&h=599&f=gif&s=2533927">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f3038e5077b?w=340&h=599&f=gif&s=4166721">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2edb65f484?w=339&h=600&f=gif&s=1851369">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f3d79591b4f?w=339&h=600&f=gif&s=6016875">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f30a3ebbf0e?w=333&h=599&f=gif&s=10435109">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2feec78c9f?w=1080&h=610&f=png&s=55845">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f30d86c140f?w=808&h=718&f=png&s=60618">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f31e1e170cf?w=1214&h=786&f=png&s=72353">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f38f8d3b21a?w=336&h=599&f=gif&s=7094877">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f322701cdf1?w=1054&h=1042&f=png&s=109243">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f33b0da2881?w=337&h=599&f=gif&s=6190890">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f35b859aba0?w=470&h=600&f=gif&s=6731352">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f32ac1dbd7a?w=1920&h=1440&f=jpeg&s=131618">
+<meta property="og:updated_time" content="2019-06-18T06:55:38.224Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于 AMP，Webnovel 都做了些什么？">
+<meta name="twitter:description" content="引言AMP 是什么？它全称 Accelerated Mobile Pages 「AMP」，是 Google 推出的一个加速网页加载的开源框架，我们在此也不做太多的介绍，具体可以看我们之前发的公众号文章。阅文前端团队作为国内最早践行 AMP 的开发团队之一，我们的 AMP 实践也经历了好几个大迭代，其成果也得到了 Google 官方的肯定，分别在 Google I/O 2019 和  AMP Con">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c9a9172d0?w=1920&h=1237&f=png&s=1499444">
+  
+    <link rel="alternate" href="/atom.xml" title="YFE BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="logo" href="/">&lt;YFE /&gt;</a>
+      <h1 id="logo-txt">阅文前端团队</h1>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        
+        <section id="main"><article id="post-20190514" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于 AMP，Webnovel 都做了些什么？
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2019/05/14/20190514/" class="article-date">
+  <time datetime="2019-05-13T16:00:00.000Z" itemprop="datePublished">2019-05-14</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/AMP/">AMP</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>AMP 是什么？它全称 Accelerated Mobile Pages 「AMP」，是 Google 推出的一个加速网页加载的开源框架，我们在此也不做太多的介绍，具体可以看我们之前发的<a href="https://juejin.im/post/5cb97f446fb9a0686362dd22" target="_blank" rel="noopener">公众号文章</a>。阅文前端团队作为国内最早践行 AMP 的开发团队之一，我们的 AMP 实践也经历了好几个大迭代，其成果也得到了 Google 官方的肯定，分别在 Google I/O 2019 和  AMP Conf 2019 大会上被 feature（图1-1），希望我们积累的经验可以给大家提供帮助。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c9a9172d0?w=1920&amp;h=1237&amp;f=png&amp;s=1499444" alt="图片"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c3025c747?w=1920&amp;h=870&amp;f=png&amp;s=604565" alt="图片"><br>「图 1-1：阅文集团在 Google I/O 大会、AMP conf 2019 被 feature」<br><a id="more"></a></p>
+<h1 id="Webnovel-with-AMP"><a href="#Webnovel-with-AMP" class="headerlink" title="Webnovel with AMP"></a>Webnovel with AMP</h1><h2 id="是否值得去做？"><a href="#是否值得去做？" class="headerlink" title="是否值得去做？"></a>是否值得去做？</h2><p>目前 Webnovel 先后进行了 2 次 AMP 页面的转化。首次 AMP 的实施输出了站点的 2 个主要着陆页：首页、详情页，上线后 1 个月 Webnovel 的阅读页 PV 提升了 59%，可以归功于 AMP 详情页的转化。第二次我们则将 Webnovel 主要路径页面进行了 AMP 的转化（阅读页、书库页、漫画详情页、漫画阅读页等），目前从 Google Analytics「GA」的数据来看，还是非常值得去实施的 ：这些 AMP 页面平均加载时间为 0.94s， 而被 AMP Cache 缓存的页面加载时间甚至为 0。</p>
+<h2 id="我们做了哪些"><a href="#我们做了哪些" class="headerlink" title="我们做了哪些?"></a>我们做了哪些?</h2><p>AMP 不仅是一个前端技术框架，它还提供了一套完整的生态，包含一系列 ”服务于“ 页面加载体验的规范和约束，其核心思想是，构建出加载速度更快甚至达到秒出的页面，这要归功于它提供的 3 个重要组件：</p>
+<ul>
+<li>AMP HTML - 提供了一系列 AMP 自定义的 HTML 标签及规则，有效地保证了 HTML 的加载体验。</li>
+<li>AMP JS - 提供了一系列 JS 组件，其资源直接来源于 Google CDN。<ul>
+<li>为了达到极致的加载体验，AMP 并不允许开发者引入自定义的 JavaScript，而是提供了大量的 AMP JS 组件来实现用户想要达到的效果（ AMP Conf 2019 新引入的 amp-script 可以帮助解决自定义组件不能完成的效果，不过当前这个功能还在实验当中）。</li>
+</ul>
+</li>
+<li>AMP Cache - 利用 Google 的缓存及预加载方案可以达到页面的秒出。</li>
+</ul>
+<p>那么用户体验与开发体验是否可以达到能够接受的平衡点？我们先来看看 Webnovel AMP 具体的实施细节吧。</p>
+<h3 id="AMP-HTML"><a href="#AMP-HTML" class="headerlink" title="AMP HTML"></a>AMP HTML</h3><p>Webnovel 的 AMP 页面采用了 EJS 模板引擎作为直出方案，和普通的 EJS 项目唯一的区别就是需要遵循 AMP HTML 的一些规则。<br>AMP HTML 提供了简单的 HTML 模板，并对一些 HTML 标签进行了规则的约束，只要遵循它的<a href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup.html?format=websites" target="_blank" rel="noopener">文档说明</a>，还是能够很快接入的。当然，Webnovel with AMP 最重要的实施步骤则是应用它的组件， 也就是「AMP JS」。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c7ae64262?w=1636&amp;h=1002&amp;f=png&amp;s=130366" alt="图片"><br>「图 1-2：AMP HTML 模板」</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2cafbeed13?w=1686&amp;h=1558&amp;f=png&amp;s=149216" alt="图片"><br>「图 1-3：AMP HTML 标签的规则」</p>
+<h3 id="AMP-组件的约束"><a href="#AMP-组件的约束" class="headerlink" title="AMP 组件的约束"></a>AMP 组件的约束</h3><p>在参加 AMP 会议之前，我可能会说，这里需要先给各位打个预防针啦！在 AMP 的世界里，你不能够引入自己的脚本、不能外链引入自己的样式，只能一切按它的规则走！但此次 AMP 会议出乎意料地带来了一个新的技能 - <strong>amp-script</strong> 的支持，我们终于可以写自己的脚本了！但需要注意的是，amp-script 仅允许解压后最多 150KB 的大小，虽然如此，我们也可以方便地利用其异步加载一些我们自己的脚本。<br>但为什么 AMP 对脚本有很多约束？来看下 AMP 的官方文档中关于脚本的说明：</p>
+<p><em>“JavaScript is powerful, it can modify just about every aspect of the page, but it can also block DOM construction and delay page rendering (see also <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript" target="_blank" rel="noopener">Adding interactivity with JavaScript</a>). To keep JavaScript from delaying page rendering, AMP allows only asynchronous JavaScript. AMP pages can’t include any author-written JavaScript”</em><br><strong>（即：JavaScript很强大，它可以改变一个页面的任何方面，但它同时也阻碍了 DOM 的生成、页面的渲染。为了避免它对渲染的阻碍，amp 仅仅允许异步加载 JavaScript，但它并不允许引入任何页面作者写的脚本）</strong></p>
+<p>脚本可以阻碍渲染，而为了保证快速呈现页面内容，脚本的约束似乎不可避免，对于 amp-script 大小的限制，也是为了保证在低端手机上依然有不错的加载体验。</p>
+<h3 id="AMP-组件的基础应用"><a href="#AMP-组件的基础应用" class="headerlink" title="AMP 组件的基础应用"></a>AMP 组件的基础应用</h3><p>AMP 提供了超级多的组件，只需：<br>1、外链引入该组件提供的 JavaScript 脚本。<br>2、找到组件示例代码、嵌入 HTML DOM 结构中，按需更改组件参数。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c4585f98a?w=599&amp;h=445&amp;f=gif&amp;s=4545039" alt="图片"></p>
+<p>「图 1-4 组件一览表」</p>
+<p>AMP 文档中，每个组件基本都有具体的<a href="https://amp.dev/documentation/examples/?format=websites" target="_blank" rel="noopener">示例代码</a>， copy 下来就可以在项目中使用，这一点很赞！但想要非常 “精准地” 实现我们想要的交互效果，还是非常难的，毕竟这个组件不是我们自己写的，我们也不能够拓展它，这种感觉就好比我们有手有脚、却只能用假肢，身体变轻盈了，但行动受到了很大的限制，不过比较欣慰的是，AMP 的常用组件也基本满足了我们的需求。这里例举了一些 Webnovel 使用的 AMP 常用组件：</p>
+<ul>
+<li><strong>amp-img</strong></li>
+</ul>
+<p>遵循 AMP HTML 的规则，所有的图片都需要用 <amp-img> 实现，它用于响应式地展示图片、并完美自带懒加载功能（不在视区内不进行加载）。目前 Webnovel 的漫画阅读页，所有的图片都用其实现了宽度 100%、高度自适应（图1-5）。<br><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c54c4abdc?w=448&amp;h=600&amp;f=gif&amp;s=5499945" alt="图片"><br>「图 1-5：amp-img 轻松实现图片高度自适应」</amp-img></p>
+<p>在此之前我们是将图片绝对定位，同时在容器上添加样式「padding-top：图片宽高比 」来实现的，相比之下 <code>&lt;amp-img&gt;</code> 更方便：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2d7aff9516?w=1662&amp;h=186&amp;f=png&amp;s=32076" alt="图片"><br>「图 1-6：旧的实现方式」</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2db694ce19?w=690&amp;h=340&amp;f=png&amp;s=26094" alt="图片"><br>「图 1-7：使用<amp-img>设置 layout 为 responsive 即可」</amp-img></p>
+<ul>
+<li><strong>amp-list</strong></li>
+</ul>
+<p>目前我们大部分 AMP 页面都使用了这个组件，只要是异步加载某些模块，就会有它的用武之地（图 1-8）：</p>
+<ol>
+<li>书详情页 - 打赏信息、标签信息、书评的异步加载。</li>
+<li>漫画列表页 - 分页加载漫画书籍</li>
+<li>漫画阅读页 - 分页加载漫画章节图片</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2fce0abb02?w=338&amp;h=599&amp;f=gif&amp;s=2533927" alt="图片"><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f3038e5077b?w=340&amp;h=599&amp;f=gif&amp;s=4166721" alt="图片"><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2edb65f484?w=339&amp;h=600&amp;f=gif&amp;s=1851369" alt="图片"><br>「图 1-8：详情页、漫画阅读页、漫画列表页 amp-list 异步加载模块」</p>
+<ul>
+<li><strong>amp fallback &amp; placeholder</strong></li>
+</ul>
+<p>非常赞的 API ！有了它，我们无需检测加载失败、加载超时的情况，只需设定好该情况对应的 UI 展示即可！amp-img、amp-list 等组件中，只需在组件内的 DOM 元素标签上添加 fallback &amp; placeholder 属性即可。</p>
+<ul>
+<li><strong>amp-mustache</strong></li>
+</ul>
+<p>提供 mustache 模板引擎，一种 logicless「弱化数据逻辑」 的模板语言， 通常配合 amp-list 等异步加载组件来使用，amp-list 发起请求拿到数据后，会渲染其中的 mustache 模板、完成数据、模板的拼接。</p>
+<ul>
+<li><strong>amp-sidebar</strong></li>
+</ul>
+<p>用于侧边栏、工具栏等。目前我们左侧滑出的侧边栏就是利用它实现的（图 1-9），实现成本很低，只需将其对应的 DOM 结构放置于 body 下，同时在触发侧边栏展示的元素上绑定 AMP 提供的 tap 事件。<br><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f3d79591b4f?w=339&amp;h=600&amp;f=gif&amp;s=6016875" alt="图片"><br>「图1-9：amp-siderbar 实现侧边目录」</p>
+<ul>
+<li><strong>amp-bind</strong></li>
+</ul>
+<p>可配合 <code>amp-state</code> 使用，<code>amp-state</code> 组件用于初始化 json 数据，而 <code>amp-bind</code> 可以绑定数据到 DOM 元素上，同时支持 <code>amp.setstate()</code>、 <code>amp.pushstate()</code> 等方法实现数据的更新。目前页面中需要动态展示的元素、文本，我们通过它绑定了数据、数据改变后页面对应的元素、文本也会对应地变成绑定的数据。<br>比较局限的方面是，只有在触发事件后数据才会生效，不适用于页面 onload 时的数据逻辑处理。</p>
+<ul>
+<li><strong>AMP 的事件机制</strong></li>
+</ul>
+<p>AMP 也支持事件的处理，例如 tap 点击事件、change 事件等，更高级的有：滚动到某位置触发动画等效果，具体可参考 AMP 文档。</p>
+<h3 id="AMP-Cache"><a href="#AMP-Cache" class="headerlink" title="AMP Cache"></a>AMP Cache</h3><p>AMP Cache 算是 AMP 的核心概念了，简单来讲，通过 Google 搜索引擎搜索到的 AMP 页面可以被 AMP 缓存，同时也会被 Google 进行预加载，Google 使用的一些安全性机制、缓存更新机制，可以让开发者更无忧地使用。AMP 也提供了被缓存页面的 CDN 地址拼接规则，利用这个缓存优势，Webnovel 将所有 AMP 页面之间的跳转链接改为了 AMP Cache 的地址，如果所有 AMP 页面都成功被 Cache ，那么页面之间几乎可以做到无缝切换（图 1-10），如果页面没有被 Cache，也不用担心会跳转到未知的 404 页面，因为 AMP Cache 会将其重定向到我们自己站点域名下的 AMP 页面。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f30a3ebbf0e?w=333&amp;h=599&amp;f=gif&amp;s=10435109" alt="图片"><br>「图 1-10：利用AMP Cache实现 AMP 页面无缝切换」</p>
+<h1 id="Webnovel-AMP-页面的体验优化"><a href="#Webnovel-AMP-页面的体验优化" class="headerlink" title="Webnovel AMP 页面的体验优化"></a>Webnovel AMP 页面的体验优化</h1><h2 id="漫画阅读页多个-AMP-组件结合使用打造更好的交互体验"><a href="#漫画阅读页多个-AMP-组件结合使用打造更好的交互体验" class="headerlink" title="漫画阅读页多个 AMP 组件结合使用打造更好的交互体验"></a>漫画阅读页多个 AMP 组件结合使用打造更好的交互体验</h2><p>Webnovel 漫画阅读页提供了另外一种不同于小说的阅读方式，由于漫画的阅读相比于小说更为方便快捷，因此其加载体验变得尤为重要，这里 Webnovel 利用 AMP 组件对漫画阅读页的加载体验做了优化，原本「刷新页面」切换章节的体验优化为「无刷新」加载章节内容。</p>
+<h3 id="amp-list、amp-form、-及-amp-state-合力实现无刷新向下加载"><a href="#amp-list、amp-form、-及-amp-state-合力实现无刷新向下加载" class="headerlink" title="amp-list、amp-form、 及 amp-state 合力实现无刷新向下加载"></a>amp-list、amp-form、 及 amp-state 合力实现无刷新向下加载</h3><p>除了服务端渲染的首章节，其它的章节内容若要实现异步加载，amp-list 组件是必然要用的，需要注意的是，如果其 src 参数为接口地址，那么页面 onload 时就会触发，但我们希望做到的是点击下一章再进行加载，因此实现方案为：</p>
+<ol>
+<li>amp-state 组件初始化章节模板所需 json 数据（图 2-1），其 id （例如 comicContent）可看作该 json 数据的变量名。</li>
+<li>amp-list 去除 src 参数，改为 <code>[src]</code> 参数，其值为上一步的 comicContent（图 2-2）。</li>
+<li>添加 amp-form 组件，其 action 参数值为下一章节的接口地址，同时参数 on 中处理表单提交成功的逻辑（图 2-3）， 即：获取数据后更新章节数组，这将会重新渲染 amp-list 中的章节模板。</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2feec78c9f?w=1080&amp;h=610&amp;f=png&amp;s=55845" alt="图片"><br>「图 2-1: amp-statue 初始化的数据」</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f30d86c140f?w=808&amp;h=718&amp;f=png&amp;s=60618" alt="图片"><br>「图 2-2: amp-list 中绑定 amp-state 中的数据」</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f31e1e170cf?w=1214&amp;h=786&amp;f=png&amp;s=72353" alt="图片"><br>「图 2-3: amp-form 的成功回调」<br>关键点：</p>
+<ul>
+<li>amp-state 中定义的章节数据需要前端自己维护一个数组（图2-1中的 chapters 字段）来存储各章节，实现 amp-list 中循环渲染章节模板，展示所有加载的章节。</li>
+<li>amp-form 中的 submit-success 逻辑中，需要通过 <code>AMP.setState()</code> 更新章节数组，将最新章节 push 进数组。</li>
+<li>amp-form 中的 submit-success 回调仅仅是接口请求成功的回调，请求成功不代表业务逻辑中也是成功的，因此需要通过业务接口成功与否的标识字段再次区分成功和失败的逻辑。</li>
+<li>amp-state 最多存储 100 kb 的数据，前端需要处理加载章节过多的情况，例如缓存当前加载的章节数，若超过一定数量，点击下一章刷新页面。</li>
+</ul>
+<p>最终实现出来的效果：<br><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f38f8d3b21a?w=336&amp;h=599&amp;f=gif&amp;s=7094877" alt="图片"><br>「图 2-4：无刷新加载下一章漫画」</p>
+<h2 id="小说阅读页-amp-list-组件进阶应用"><a href="#小说阅读页-amp-list-组件进阶应用" class="headerlink" title="小说阅读页 amp-list 组件进阶应用"></a>小说阅读页 amp-list 组件进阶应用</h2><p>在上一节中，通过 amp-list、amp-form、 amp-state 3个组件的结合使用，终于实现了无刷新加载下一章，其实 amp-list 近期已提供实验性高级 API:  load-more 及 load-more-bookmark 等参数，可以做到无限加载，并同时支持点击加载、无限滚动加载2种方式，无需前端自己维护章节数组，所有的一切都由 amp-list 自己实现。这里对小说阅读页进行了实践。</p>
+<h3 id="amp-list-load-more-实现无限滚动加载"><a href="#amp-list-load-more-实现无限滚动加载" class="headerlink" title="amp-list-load-more 实现无限滚动加载"></a>amp-list-load-more 实现无限滚动加载</h3><p>amp-list-load-more 的实践非常简单，只需在 amp-list 组件中，加入 load-more、load-more-bookmark 参数即可（图2-4），具体 api 说明可参考 <a href="https://amp.dev/documentation/components/amp-list.html?format=websites" target="_blank" rel="noopener">amp-list 的文档</a>。虽然当前功能为实验性功能，但相信 Google 不久后就会在正式环境进行支持。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f322701cdf1?w=1054&amp;h=1042&amp;f=png&amp;s=109243" alt="图片"><br>「图 2-4：amp-list-load-more 代码片段」</p>
+<p>由于 amp-list-load-more 是 AMP 的实践性功能，除了添加参数，还是需要做些准备工作的。</p>
+<ol>
+<li>正式环境中，需要在小说阅读页的访问地址域名下（webnovel.com 或 AMP cache 的 Google 域名）种一个 Cookie（<code>name: AMP_EXP，value: amp-list-load-more</code>）才可体验此功能。</li>
+<li>load-more-bookmark 参数只能为章节返回数据中的字段名称，其值必须为下一章的接口地址，不支持前端自己拼接地址，因此需要后端配合添加此字段。</li>
+<li>接口返回的下一章 url 不能为相对路径，必须为带协议头、自己站点域名的 url，否则在 Google 域名下请求地址的域名会出现问题。</li>
+</ol>
+<p>最终实现效果：<br><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f33b0da2881?w=337&amp;h=599&amp;f=gif&amp;s=6190890" alt="图片"></p>
+<h1 id="Webnovel-更多的-AMP-实践"><a href="#Webnovel-更多的-AMP-实践" class="headerlink" title="Webnovel 更多的 AMP 实践"></a>Webnovel 更多的 AMP 实践</h1><p>当然，Webnovel 不只用了上文中提到的 AMP 基础组件，也没有止步于组件级别的体验优化，Webnovel 还使用了 AMP 主推的一些王者功能。 </p>
+<h2 id="更优的体验-AMP-主推功能的实践"><a href="#更优的体验-AMP-主推功能的实践" class="headerlink" title="更优的体验 - AMP 主推功能的实践"></a>更优的体验 - AMP 主推功能的实践</h2><h3 id="Signed-HTTP-Exchange-「SXG」"><a href="#Signed-HTTP-Exchange-「SXG」" class="headerlink" title="Signed HTTP Exchange 「SXG」"></a><strong>Signed HTTP Exchange 「SXG」</strong></h3><p>它也是 AMP conf 2019 的亮点，其效果为：访问了 Webnovel Google 域名下的 AMP 页面，浏览器 url 地址展示的是 Webnovel 主站的域名（如图3-1）！这是 AMP 今年主推的功能之一，有些公司已进行实践，例如 Yahoo Japan，而 Webnovel 也抓住了时机、成功地进行了实践，其效果及实现细节可以参考「 <a href="https://juejin.im/post/5cb97f446fb9a0686362dd22" target="_blank" rel="noopener">Webnovel 的 SXG 实践 </a> by 刘鹏」。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f35b859aba0?w=470&amp;h=600&amp;f=gif&amp;s=6731352" alt="图片"><br>「图 3-1：Webnovel SXG 实施效果」</p>
+<h3 id="amp-story"><a href="#amp-story" class="headerlink" title="amp-story"></a><strong>amp-story</strong></h3><p>算是 AMP 相当主推的功能了！使用其提供的多样性模板可以更加丰富地全屏展示 Webnovel 的各种故事「 关于 AMP Story，你需要知道这些 by 芯芯」，视频和 animation 的结合使 Webnovel 的用户可以更沉浸的浏览书籍。<code>amp-story</code> 还提供本地化、兼容桌面与移动端的展示等功能，此次 AMP 会议还带来了 <code>amp-story</code> 的一些新推进，例如 <code>amp-story</code> 自动生成工具、 Google Search 结果页直接收录并展示 AMP Story 等多方面的支持，可以说是非常牛了。</p>
+<h2 id="AMP-conf-2019"><a href="#AMP-conf-2019" class="headerlink" title="AMP conf 2019"></a>AMP conf 2019</h2><p>目前 AMP 还有很多值得实践的功能，这次 Google 团队在东京举办的 AMP Conf 2019 也带来了很多新的想法，不少来自世界各地的开发、产品、设计都簇拥于此，可见 AMP 已逐渐具备广阔的市场。我们也很幸运地被邀请参加这次会议，一起见证了AMP 的新技术及主推的功能、同时也从世界各个公司的 AMP 案例中，再次深刻地体会到了 AMP 技术的价值、潜力。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f32ac1dbd7a?w=1920&amp;h=1440&amp;f=jpeg&amp;s=131618" alt="图片"><br>「AMP conf 2019 in Tokyo」</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>一切新技术的应用都应该服务于用户，而衡量一个技术是否值得实施的途径之一就是看数据。Webnovel 在实践 AMP 后，最显著的改变非常符合 AMP 的核心目标 - 页面加载体验的极致提升（87% 的提升），除此之外，GA 的数据也证实了一些其他的优势，例如，Webnovel 主要页面的 PV 在应用 AMP 技术后有所提升（阅读页 PV 增加近 59%）、Webnovel Google 搜索引擎的来源提升了 18%，从数据上来看 Webnovel 的 AMP 实践是非常有意义的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMP/">AMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/22/20190522/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <p class="article-nav-title">
+        
+          关于 AMP Story，你需要知道这些
+        
+      </p>
+    </a>
+  
+  
+    <a href="/2019/04/19/20190419/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <p class="article-nav-title">Google AMP WebPackage 在 Webnovel 的应用</p>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'fa1c26ca3c2d7b094b20',
+    clientSecret: 'eed998812f911c13e5c832a4ec9b346160e2662f',
+    id: window.location.pathname,
+    repo: 'yuewen-yux.github.io',
+    owner: 'yuewen-yux',
+    admin: 'yuewen-yux',
+    distractionFreeMode: 'true'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+</section>
+        
+        
+      </div>
+      <footer id="footer">
+    
+        
+<aside id="sidebar" class="outer">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AMP/">AMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hybrid/">Hybrid</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React-Native/">React Native</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/animation/">animation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/无障碍访问/">无障碍访问</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/22/20190522/">关于 AMP Story，你需要知道这些</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/14/20190514/">关于 AMP，Webnovel 都做了些什么？</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/19/20190419/">Google AMP WebPackage 在 Webnovel 的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+
+    
+    <div class="outer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+                <div class="footer-grid-col">
+                    <div class="footer-items">
+                    <a class="footer-item" href>GITHUB</a>
+                    <a class="footer-item" href>掘金</a>
+                    <a class="footer-item" href>知乎</a>
+                    <a class="footer-item" href>微信公众号</a>
+                    </div>
+                </div>
+                <div class="footer-grid-col">
+                    <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YFE All Rights Reserved</p>
+                    <!--<p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="/fancybox/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+  </body>
+</html>

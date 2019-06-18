@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>关于 AMP Story，你需要知道这些 | YFE BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在我们的 AMP 改版 过程中，我们发现了一些新的 AMP 组件，并针对部分组件做了一些尝试。其中就包括 AMP Story。AMP Story 是 AMP 的一种新的网页展现形式。 成果展示在介绍 AMP Story 之前，大家可以先看一下，我们基于 AMP Story 技术做的一个 Demo 页面。下面是我们做的一个关于 Tour Of Wenbovel 主题的一个 AMP Story 页面。">
+<meta name="keywords" content="AMP,Webnovel,Google">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于 AMP Story，你需要知道这些">
+<meta property="og:url" content="http://yoursite.com/2019/05/22/20190522/index.html">
+<meta property="og:site_name" content="YFE BLOG">
+<meta property="og:description" content="在我们的 AMP 改版 过程中，我们发现了一些新的 AMP 组件，并针对部分组件做了一些尝试。其中就包括 AMP Story。AMP Story 是 AMP 的一种新的网页展现形式。 成果展示在介绍 AMP Story 之前，大家可以先看一下，我们基于 AMP Story 技术做的一个 Demo 页面。下面是我们做的一个关于 Tour Of Wenbovel 主题的一个 AMP Story 页面。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://uploader.shimo.im/f/XSCYMSje3zsEKX6v.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/XtIORtgqU24WE7cM.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/X53CXCD4qI4dlIab.gif">
+<meta property="og:image" content="https://uploader.shimo.im/f/9xBGEDo5U8QOUXYq.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/VJjUOLuHUfg2XlfX.gif">
+<meta property="og:image" content="https://uploader.shimo.im/f/Jx2eFzZCkp8V1Q7u.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/5HC3dPLFaiYJ3igY.gif">
+<meta property="og:image" content="https://uploader.shimo.im/f/Uy5IptV6LQcXYiAJ.gif">
+<meta property="og:image" content="https://uploader.shimo.im/f/8ZxzOxxtaDYTiX1E.gif">
+<meta property="og:image" content="https://uploader.shimo.im/f/JArwTAR3T7gGM9Vk.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/Q7Hjlh4w5gk9xtXR.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/MMwxA6YoUAEn7N0C.png!thumbnail">
+<meta property="og:image" content="https://uploader.shimo.im/f/1KmXuX71ZuQbcvNs.gif">
+<meta property="og:image" content="https://uploader.shimo.im/f/NSRpN9hTH4o8RVoN.gif">
+<meta property="og:image" content="https://uploader.shimo.im/f/z7pRXj6nXKAiMdwe.gif">
+<meta property="og:updated_time" content="2019-06-18T07:02:47.817Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于 AMP Story，你需要知道这些">
+<meta name="twitter:description" content="在我们的 AMP 改版 过程中，我们发现了一些新的 AMP 组件，并针对部分组件做了一些尝试。其中就包括 AMP Story。AMP Story 是 AMP 的一种新的网页展现形式。 成果展示在介绍 AMP Story 之前，大家可以先看一下，我们基于 AMP Story 技术做的一个 Demo 页面。下面是我们做的一个关于 Tour Of Wenbovel 主题的一个 AMP Story 页面。">
+<meta name="twitter:image" content="https://uploader.shimo.im/f/XSCYMSje3zsEKX6v.png!thumbnail">
+  
+    <link rel="alternate" href="/atom.xml" title="YFE BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="logo" href="/">&lt;YFE /&gt;</a>
+      <h1 id="logo-txt">阅文前端团队</h1>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        
+        <section id="main"><article id="post-20190522" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于 AMP Story，你需要知道这些
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2019/05/22/20190522/" class="article-date">
+  <time datetime="2019-05-21T16:00:00.000Z" itemprop="datePublished">2019-05-22</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/AMP/">AMP</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在我们的 AMP 改版 过程中，我们发现了一些新的 AMP 组件，并针对部分组件做了一些尝试。其中就包括 AMP Story。AMP Story 是 AMP 的一种新的网页展现形式。</p>
+<h2 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h2><p>在介绍 AMP Story 之前，大家可以先看一下，我们基于 AMP Story 技术做的一个 Demo 页面。下面是我们做的一个关于 Tour Of Wenbovel 主题的一个 AMP Story 页面。对用户来说，与传统的单纯文字和图片不一样，它提供了一种沉浸式的 Web 体验。</p>
+<p><a href="https://uploader.shimo.im/f/eFps8kovb70DCuXO.mp4" target="_blank" rel="noopener">1.mp4</a></p>
+<p><img src="https://uploader.shimo.im/f/XSCYMSje3zsEKX6v.png!thumbnail" alt="图片"><br>「Webnovel 的 AMP Story 页面，<a href="https://m.webnovel.com/amp/tour_of_webnovel" target="_blank" rel="noopener">Tour of Webnovel</a>」</p>
+<a id="more"></a>
+<h2 id="AMP-Story"><a href="#AMP-Story" class="headerlink" title="AMP Story"></a>AMP Story</h2><p>AMP Story 是 AMP 在推的 4 大主类之一，另外三个分别是 AMP Website、AMP Ads、AMP Email。之前我们都是着重于 AMP Website 这一方面的工作。<br>AMP Story 在展现形式上类似于我们熟悉的 ppt，同样是文字和图片搭配，加以丰富动效和页面切换。但除此之外，AMP 团队为我们实现了更多组件细节。比如页面切换时的贴心提示，告诉用户左右切换的点击区域；比如 pc 端到移动端的样式适配；比如社交网络分享功能，我们不需要再自己集成各个社交网络的分享；他们甚至为 AMP Story 单独做了一套沉浸式的广告组件。</p>
+<h3 id="为什么要做-AMP-Story"><a href="#为什么要做-AMP-Story" class="headerlink" title="为什么要做 AMP Story"></a>为什么要做 AMP Story</h3><p>AMP Conf 2019 上的一个分享<a href="https://www.youtube.com/watch?v=Rm4HgfvM_dQ" target="_blank" rel="noopener">「Boring Content - Excited Users」</a>令人感触颇深：Boost 是一个让用户比较、选择数百种不同运营商流量包的产品。他们的用户主要是非洲、印尼、东南亚的年轻人，对新技术有很强的适应能力，喜欢新颖的东西。他们原来使用博文的形式来介绍、比较各种流量包，但效果并不好，因为内容无法引起用户的兴趣。于是他们改用了 AMP Story，这种动感、图文并备的形式，让他们的内容阅读完成率提高到了 87%。</p>
+<p> <img src="https://uploader.shimo.im/f/XtIORtgqU24WE7cM.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/X53CXCD4qI4dlIab.gif" alt="图片"></p>
+<p> 「boost 的两种推文形式对比，图片摘自<a href="https://www.youtube.com/watch?v=Rm4HgfvM_dQ" target="_blank" rel="noopener">演讲视频</a>」</p>
+<p>在信息爆炸的时代，人们越来越难以集中注意力，面对一整屏密密麻麻的文字时的通常状态是：一目十行地随意浏览，寻找关键信息，机械地滑动屏幕并假装自己看完了。这也是为什么总是会有“太长不看”的吐槽，也是为什么信息碎片化的社交网络、抖音这样的沉浸式短视频应用会轻而易举地攫取用户的芳心甚至让用户上瘾的原因。<br>上面提到的 Boost 案例也印证了这一点。东南亚、非洲，这些地区拥有大量的远高于桌面的移动用户，他们喜爱在 Youtube 上看视频，喜欢刷 Facebook，Boost 的成功之处正是顺应用户心理作出改变。<br>AMP Story 作为一种新的网页信息展现方式，跳出了传统的文字为主的垂直的文档流页面，让更加生动的图片、短视频等进行自我表达。而我们也可以借机思考——现有的一些页面是否能吸引用户的注意力，用户是否能有效地消化我们传达的信息，将来我们的用户会喜欢如何获取信息等等，并快速作出一些改变、尝试。</p>
+<h3 id="开发的基本流程"><a href="#开发的基本流程" class="headerlink" title="开发的基本流程"></a>开发的基本流程</h3><p>开发 AMP Story 不是一件很困难的事情，官方提供了详尽的文档和丰富的案例。<br>但在开发之前，我们还要思考内容迁移。如果你的内容是一个榜单或一个列表，那就十分简单。但如果不是，你就要考虑如何把你的内容井井有条地分解，然后大量地删减文字，只留下最核心的思想，搭配相应的图片、视频资源，从而更加直观而有力的表达，或营造氛围。</p>
+<p><img src="https://uploader.shimo.im/f/9xBGEDo5U8QOUXYq.png!thumbnail" alt="图片"><br>「<a href="https://amp.dev/documentation/guides-and-tutorials/start/visual_story/parts_of_story?format=stories" target="_blank" rel="noopener">Understanding the parts of an AMP story</a> by AMP」</p>
+<p>上图展示了 AMP Story 的三个层级：Pages、Layers、Elements。按这个结构搭好页面框、指定 layer 的<a href="https://amp.dev/documentation/guides-and-tutorials/start/visual_story/create_cover_page" target="_blank" rel="noopener">布局</a>（Fill、Vertical、Horizontal、Thirds）、往里塞一些需要的组件（文字、图片、视频等等）并给组件加上<a href="https://amp.dev/documentation/guides-and-tutorials/start/visual_story/animating_elements" target="_blank" rel="noopener">动画</a>，就可以完成一个最简单的 Page。<br>以我们的第二个 Page ，也就是除 cover 外正文的第一个 Page 为例，它的结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;amp-story-page id=&quot;page2&quot; class=&quot;page&quot; auto-advance-after=&quot;video2&quot;&gt; 	&lt;amp-story-grid-layer template=&quot;fill&quot;&gt;</span><br><span class="line">	&lt;amp-video id=&quot;video2&quot; layout=&quot;fill&quot; src=&quot;//www.yueimg.com/overseam/img/amp/story/webnovel_02.mp4&quot; poster=&quot;//www.yueimg.com/overseam/img/amp/story/poster_02.jpg&quot; autoplay&gt;&lt;/amp-video&gt;</span><br><span class="line">	&lt;/amp-story-grid-layer&gt;</span><br><span class="line">	&lt;amp-story-grid-layer template=&quot;vertical&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;</span><br><span class="line">	&lt;div animate-in=&quot;fly-in-right&quot;</span><br><span class="line">	     animate-in-duration=&quot;0.2s&quot;</span><br><span class="line">	     animate-in-delay=&quot;4s&quot;&gt;</span><br><span class="line">	&lt;div class=&quot;pin-bottom&quot;&gt;</span><br><span class="line">	&lt;h2&gt;Cultivation Chat Group&lt;/h2&gt;</span><br><span class="line">	&lt;p&gt;One day, Song Shuhang was suddenly added to a chat group with many seniors that suffered from chuuni disease...&lt;/p&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/amp-story-grid-layer&gt;</span><br><span class="line">&lt;/amp-story-page&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这个 page 的效果如下：<br><img src="https://uploader.shimo.im/f/VJjUOLuHUfg2XlfX.gif" alt="图片"></p>
+<p>如此炮制出封面和其他 page，再加上书末页（我们会在后文详细说明），你的整个 story 就基本完成了。</p>
+<p><img src="https://uploader.shimo.im/f/Jx2eFzZCkp8V1Q7u.png!thumbnail" alt="图片"><br>「封面和书末」</p>
+<h3 id="开发-tips"><a href="#开发-tips" class="headerlink" title="开发 tips"></a>开发 tips</h3><ul>
+<li>集成 <amp-analytics> 和 <amp-install-serviceworker></amp-install-serviceworker></amp-analytics></li>
+</ul>
+<p>由于 AMP Story 整套的层级十分严格——比如说 body 下只能有一个 <amp-story> 子元素。因此我们很难像正常的代码那样在逻辑合理的位置插入必要的 <amp-analytics> 以及 <amp-install-serviceworker> 组件。<br>我们的解决方案是这样的：将 <amp-analytics> 放在 <amp-story> 下，它应该是 <amp-story> 除了 <amp-story-page> 外唯一能容纳的组件；<amp-install-serviceworker> 则无法放在这里，于是我们将它放在了第一个 page 下的单独一个 layer 中，其他用法则没有什么区别。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;amp-story standalone&gt;</span><br><span class="line">    &lt;amp-analytics type=&quot;googleanalytics&quot; id=&quot;analytics&quot;&gt;</span><br><span class="line">        &lt;script type=&quot;application/json&quot; data-ignore=&quot;true&quot;&gt;</span><br><span class="line">            &#123;</span><br><span class="line">            &quot;vars&quot;: &#123;</span><br><span class="line">                &quot;account&quot;: &quot;UA-xxxxxxxx-x&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            &quot;triggers&quot;: &#123;</span><br><span class="line">                &quot;default pageview&quot;: &#123;</span><br><span class="line">                    &quot;on&quot;: &quot;visible&quot;,</span><br><span class="line">                    &quot;request&quot;: &quot;pageview&quot;,</span><br><span class="line">                    &quot;vars&quot;: &#123;</span><br><span class="line">                        &quot;title&quot;: &quot;&#123;&#123; page.title | safe &#125;&#125;&quot;</span><br><span class="line">                    &#125;,</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">    &lt;/amp-analytics&gt;</span><br><span class="line">    &lt;amp-story-page id=&quot;page1&quot; class=&quot;page&quot; auto-advance-after=&quot;video1&quot;&gt;</span><br><span class="line">        &lt;amp-story-grid-layer template=&quot;fill&quot; &gt;</span><br><span class="line">            &lt;!-- invisible things --&gt;</span><br><span class="line">            &lt;amp-install-serviceworker src=&quot;https://m.webnovel.com/sw.js&quot; data-iframe-src=&quot;https://m.webnovel.com/installServiceWorker&quot; layout=&quot;nodisplay&quot;&gt;&lt;/amp-install-serviceworker&gt;</span><br><span class="line">            &lt;!-- invisible things end --&gt;</span><br><span class="line">        &lt;/amp-story-grid-layer&gt;</span><br><span class="line">        ...</span><br><span class="line">    &lt;/amp-story-page&gt;</span><br><span class="line">    ...</span><br><span class="line">&lt;/amp-story&gt;</span><br></pre></td></tr></table></figure></amp-install-serviceworker></amp-story-page></amp-story></amp-story></amp-analytics></amp-install-serviceworker></amp-analytics></amp-story></p>
+<ul>
+<li>amp-story-bookend 小技巧</li>
+</ul>
+<p><img src="https://uploader.shimo.im/f/5HC3dPLFaiYJ3igY.gif" alt="图片"></p>
+<p><amp-story-bookend> 是 AMP Story 的结束页组件，当用户播放完所有的 page 后，就会看到这样一个弹层，将用户引流到相关的链接、引导用户分享等等。<br>这个弹层的样式和交互是固定的，我们需要通过一个 json 来定制其内容。官方的使用案例是外链一个 json 文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;amp-story-bookend src=&quot;path/to/my/bookend.json&quot;&gt;&lt;/amp-story-bookend&gt;</span><br></pre></td></tr></table></figure></amp-story-bookend></p>
+<p>但将这样一个最多只有十几行的 json 单独提取一个页面，我的内心是拒绝的，毕竟文件的管理、缓存、更新都更加麻烦。<br>其实官方也实现了内嵌的写法，只是并未在文档中特意指出，具体可以查看这个 <a href="https://github.com/ampproject/amphtml/issues/15826" target="_blank" rel="noopener">issue</a>。<br>于是我们可以愉快的这样写⤵️，如果是服务端渲染，还可以用代码生成相关内容。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;amp-story-bookend&gt;</span><br><span class="line">  &lt;script type=&quot;application/json&quot;&gt;</span><br><span class="line">    /* bookend JSON goes here */</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/amp-story-bookend&gt;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>善用模板</li>
+</ul>
+<p>如果你的大量内容形式趋同，大可以通过模板抽离出可复用的框架，定制其中的样式、动画组合、资源内容等等，减少样板代码。</p>
+<h3 id="最佳实践经验"><a href="#最佳实践经验" class="headerlink" title="最佳实践经验"></a>最佳实践经验</h3><p>完成一个 AMP Story 是十分简单的事情。但是要做一个出色的 story 却并不简单。<br>AMP 团队给出了一些关于 AMP Story 的最佳实践，结合我们自身的经验，可以大致从这四个方向来优化。</p>
+<p>沉浸式体验</p>
+<p><img src="https://uploader.shimo.im/f/Uy5IptV6LQcXYiAJ.gif" alt="图片"><img src="https://uploader.shimo.im/f/8ZxzOxxtaDYTiX1E.gif" alt="图片"><br>「<a href="https://www-wired-com.cdn.ampproject.org/c/s/www.wired.com/amp-stories/space-photos-of-the-week-111817/" target="_blank" rel="noopener">Space Photos of The Week</a> by the Wired」</p>
+<ul>
+<li>沉浸式体验的一般做法就是全屏。比起只在页面中划分一小块来展示图片或者视频，全屏能展示更多细节、减少干扰，让用户集中注意力。</li>
+<li>当页面的主要资源是视频时，可以自动播放视频。如果是连续的视频，可以在播放结束时自动切换至下一页。</li>
+</ul>
+<p>易于阅读</p>
+<p><img src="https://uploader.shimo.im/f/JArwTAR3T7gGM9Vk.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/Q7Hjlh4w5gk9xtXR.png!thumbnail" alt="图片"><img src="https://uploader.shimo.im/f/MMwxA6YoUAEn7N0C.png!thumbnail" alt="图片"><br>「<a href="https://www-theatlantic-com.cdn.ampproject.org/c/s/www.theatlantic.com/assets/media/interactives/2019/01/02/the-amazon-gold-rush-atlantic-amp-story/" target="_blank" rel="noopener">The Amazon Gold Rush</a> by the Atlantic」</p>
+<ul>
+<li>确保中心突出、文字简练。突出关键信息（如标题）的方式很多，比如为文字单独加上背景颜色。 </li>
+<li>正文字体大小应不小于浏览器推荐的最小字体 16px。</li>
+<li>注意图文的关联性。</li>
+<li>在背景是图片或视频的前提下，可以在中间放置一个蒙层，保证文字阅读不受影响杂乱背景的干扰。</li>
+</ul>
+<p>注重弱网体验</p>
+<ul>
+<li>提供视频的首帧作为 poster，同时从中截取主色作为该页的背景色，这是为了让页面上的文字保证可读，同时让整个加载过程流畅过渡。</li>
+<li>每页视频一般不超过 10s、4Mb，否则可能导致过长的加载时间。</li>
+</ul>
+<p>体验的丰富性和整体的协调性</p>
+<p><img src="https://uploader.shimo.im/f/1KmXuX71ZuQbcvNs.gif" alt="图片"><img src="https://uploader.shimo.im/f/NSRpN9hTH4o8RVoN.gif" alt="图片"><img src="https://uploader.shimo.im/f/z7pRXj6nXKAiMdwe.gif" alt="图片"><br>「<a href="https://www.usatoday.com/amp-stories/beyonce-rule-the-world/" target="_blank" rel="noopener">beyonce-rule-the-world</a>  by USA today」</p>
+<p>一方面，我们可以加上动画来使页面更加动感、富有韵律，或者通过视频实现一些创意效果，给人留下深刻的印象。<br>另一方面，我们不应该滥用动画，一股脑地把能加的东西都加进来而不考虑协调性自然是不可取的操作。<br>如果觉得难以把握这个度，可以向设计师寻求帮助。或者参考 AMP story 主页上的优秀案例。</p>
+<h3 id="实用工具"><a href="#实用工具" class="headerlink" title="实用工具"></a>实用工具</h3><p>AMP Story 从形式上强制优化阅读体验，促使内容生产者创造出更加直观、生动的内容，而不仅仅只依靠文字。<br>但是对开发者来说，有限的施展空间导致 AMP Story 的开发偏向模式化。因此，我们可以使用一些 AMP Story 的辅助工具来加速其生产流程。</p>
+<ul>
+<li>makestories.io ：这个网站提供许多 AMP Story 的模板，支持可视化制作 AMP Story，解放程序员的🤲。</li>
+<li>Wordpress 插件：同上，可以可视化制作 AMP Story。</li>
+<li>Jumprope：制作步骤类型的视频，可作为 AMP Story 的素材。</li>
+<li>Unfold：制作图片、文字拼贴，可作为 AMP Story 的素材。</li>
+</ul>
+<h3 id="AMP-Story-的更多可能性"><a href="#AMP-Story-的更多可能性" class="headerlink" title="AMP Story 的更多可能性"></a>AMP Story 的更多可能性</h3><p>AMP 团队也在不断为 AMP Story 添砖加瓦，让它具备更多可能性。下面是一些笔者觉得很赞的点：</p>
+<ul>
+<li>Localization：将你的内容语言自动翻译成其他国家的语言，并适应其语言方向（比如阿拉伯语就是从右到左的）。</li>
+<li>sidebar：加强跟主页联系，AMP Story 不再是一个孤立的页面。</li>
+<li>内嵌第三方插件：例如 Twitter 内嵌、Google Map 内嵌、Youtube 视频内嵌等等，一个线下实体店铺推荐的 story 就可以加入 Google Map 内嵌。</li>
+<li>附件：给部分 page 一个了解更多的下拉选项，即可加载非 AMP Story 页面的内容。</li>
+<li>Google Search 中的优化：在 Google Search中开辟了新的位置专门用于展示 AMP Story，生态的构建也是十分重要的一环。</li>
+<li>amp-story-ad：AMP Story 独有的广告组件，作为单独的一个 page 插入在 story 中，兼顾了体验上的无缝、和谐。你看，AMP 团队甚至考虑到了广告，可见其打造生态闭环的野心。<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>作为 AMP Story 的消费者，用户可以获得更加丰富的体验。而作为 AMP Story 的 publisher，AMP Story 完全可以让我们集中于内容的创造，减少了大量开发的成本。我们无需考虑组件的实现方式、各种屏幕下的内容完整程度、不需要再手动集成分享的功能，只需要在 AMP 最佳实践的基础上，致力于真正的目标。而 AMP Story 日渐完善的生态，包括 SEO 的红利和其广告收益也都十分值得我们去尝试。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMP/">AMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/14/20190514/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <p class="article-nav-title">关于 AMP，Webnovel 都做了些什么？</p>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'fa1c26ca3c2d7b094b20',
+    clientSecret: 'eed998812f911c13e5c832a4ec9b346160e2662f',
+    id: window.location.pathname,
+    repo: 'yuewen-yux.github.io',
+    owner: 'yuewen-yux',
+    admin: 'yuewen-yux',
+    distractionFreeMode: 'true'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+</section>
+        
+        
+      </div>
+      <footer id="footer">
+    
+        
+<aside id="sidebar" class="outer">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AMP/">AMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hybrid/">Hybrid</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React-Native/">React Native</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/animation/">animation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/无障碍访问/">无障碍访问</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/22/20190522/">关于 AMP Story，你需要知道这些</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/14/20190514/">关于 AMP，Webnovel 都做了些什么？</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/19/20190419/">Google AMP WebPackage 在 Webnovel 的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+
+    
+    <div class="outer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+                <div class="footer-grid-col">
+                    <div class="footer-items">
+                    <a class="footer-item" href>GITHUB</a>
+                    <a class="footer-item" href>掘金</a>
+                    <a class="footer-item" href>知乎</a>
+                    <a class="footer-item" href>微信公众号</a>
+                    </div>
+                </div>
+                <div class="footer-grid-col">
+                    <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YFE All Rights Reserved</p>
+                    <!--<p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="/fancybox/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+  </body>
+</html>

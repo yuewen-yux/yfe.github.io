@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>起点海外版 Hybrid App－内嵌页优化实践 | YFE BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。 目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能">
+<meta name="keywords" content="App,Hybrid,用户体验,Webnovel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="起点海外版 Hybrid App－内嵌页优化实践">
+<meta property="og:url" content="http://yoursite.com/2018/06/25/20180625/index.html">
+<meta property="og:site_name" content="YFE BLOG">
+<meta property="og:description" content="今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。 目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/1.png">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/2.png">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/3.png">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/4.png">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/5.png">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/6.png">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/1.gif">
+<meta property="og:image" content="http://yoursite.com/css/images/20180625/7.png">
+<meta property="og:updated_time" content="2019-06-18T10:02:45.247Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="起点海外版 Hybrid App－内嵌页优化实践">
+<meta name="twitter:description" content="今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。 目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能">
+<meta name="twitter:image" content="http://yoursite.com/css/images/20180625/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="YFE BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="logo" href="/">&lt;YFE /&gt;</a>
+      <h1 id="logo-txt">阅文前端团队</h1>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        
+        <section id="main"><article id="post-20180625" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      起点海外版 Hybrid App－内嵌页优化实践
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/06/25/20180625/" class="article-date">
+  <time datetime="2018-06-24T16:00:00.000Z" itemprop="datePublished">2018-06-25</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/Hybrid/">Hybrid</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。</p>
+<p>目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能和用户体验。</p>
+<a id="more"></a>
+<p><img src="/css/images/20180625/1.png" alt="Webnovel App 页面截图">  </p>
+<p>在开始讲解起点海外版 App 中内嵌页的具体实现以及优化之前，让我们先来了解下整个 Hybird App 实现的具体方案。</p>
+<h2 id="一、Hybrid-App-实现方案"><a href="#一、Hybrid-App-实现方案" class="headerlink" title="一、Hybrid App 实现方案"></a>一、Hybrid App 实现方案</h2><h3 id="1-什么是-Hybrid-App-？"><a href="#1-什么是-Hybrid-App-？" class="headerlink" title="1. 什么是 Hybrid App ？"></a>1. 什么是 Hybrid App ？</h3><p>Hybrid App（混合模式移动应用）是指介于 WebApp 、Native-App 这两者之间的 App，兼具「 Native App 良好用户交互体验的优势 」和「 Web App 跨平台开发的优势 」。  </p>
+<h3 id="2-为什么选择-Hybrid-App"><a href="#2-为什么选择-Hybrid-App" class="headerlink" title="2. 为什么选择 Hybrid App"></a>2. 为什么选择 Hybrid App</h3><ol>
+<li>Web 实现相对简单，一套代码，两端兼容；</li>
+<li>产品还在快速迭代，变数大，而 Native App 开发，成本偏高；</li>
+<li>Web 开发时间较短，减少成本，可以应付产品的快速迭代；  </li>
+<li>Hybrid App 的开发方式在公司其他项目上已经有了很好的运用，技术方案已有沉淀；      </li>
+</ol>
+<p>以上几点，是促使海外版 App 使用 Hybird 模式进行开发的主要原因。</p>
+<h2 id="二、整体架构"><a href="#二、整体架构" class="headerlink" title="二、整体架构"></a>二、整体架构</h2><p><img src="/css/images/20180625/2.png" alt="Hybird App 的开发方案的总体架构图"> </p>
+<h3 id="1-Hybird-实现方案"><a href="#1-Hybird-实现方案" class="headerlink" title="1. Hybird 实现方案"></a>1. Hybird 实现方案</h3><p>Hybird App 是使用 iOS 原生 、 Andoird 原生 、Web 页面 「 内置于 App 中的页面，既内嵌页 」一起实现的方式进行开发。</p>
+<h3 id="2-完整的SDK工具"><a href="#2-完整的SDK工具" class="headerlink" title="2. 完整的SDK工具"></a>2. 完整的SDK工具</h3><ol>
+<li><p><strong>离线包</strong>：Web 页面资源以离线包的形式内嵌在 App 本地存储中。当访问页面的时候，WebView 对于本地存储的资源无须额外发起的网络请求，直接读取。而剩下的请求中，就只剩下 Ajax 拉取的 Json 动态数据，和渲染这部分数据时携带的图片资源，以及一些必要的埋点请求。这使 Web 页面即是在弱网的情况下也可以很快的打开；</p>
+</li>
+<li><p><strong>完善的JSSDK</strong>：使用 JSSDK 与 App 进行交互，透明且跨平台地使用客户端的能力，形成交互闭环，给用户良好的交互体验；</p>
+</li>
+<li><p><strong>离线包打包工具</strong>：自动化打包工具能快速的产出离线包。没有了人工干预，App 离线包正确性也能得以保证；</p>
+</li>
+<li><p><strong>完善的热更新机制</strong>：App 客户端监测到离线包更新之后，客户端静默更新（用户无感知），解决了 Native App 页面不能补丁更新，只能发版修复 Bug 的问题；</p>
+</li>
+</ol>
+<h3 id="3-完善的后台系统平台"><a href="#3-完善的后台系统平台" class="headerlink" title="3. 完善的后台系统平台"></a>3. 完善的后台系统平台</h3><ol>
+<li><p><strong>一键打包</strong>：内嵌页离线包打包工具可视化，实现一键打包产出离线包；</p>
+</li>
+<li><p><strong>降级融灾</strong>：快速回退至之前版本，如有问题，快速下线新版本功能；</p>
+</li>
+<li><p><strong>数据采集</strong>：完善的数据采集平台，通过数据分析优化用户体验；</p>
+</li>
+<li><p><strong>灰度更新</strong>：支持根据配置进行灰度更新；</p>
+</li>
+<li><p><strong>持续集成</strong>：系统平台目前还在持续集成当中，为提供更好的开发流程；</p>
+</li>
+</ol>
+<h2 id="三、内嵌页的优化"><a href="#三、内嵌页的优化" class="headerlink" title="三、内嵌页的优化"></a>三、内嵌页的优化</h2><p>我们起点海外  App 大部分页面都采用 Hybird 实现的，对于最大程度的接近 Native App 的页面性能和用户体验这两个点，我着重讲解下面两个部分：</p>
+<ol>
+<li><p>内嵌页全局优化－接口页面并行加载；</p>
+</li>
+<li><p>详情页加载优化－ localStorage ；</p>
+</li>
+</ol>
+<h3 id="1-内嵌页全局优化－接口页面并行加载"><a href="#1-内嵌页全局优化－接口页面并行加载" class="headerlink" title="1. 内嵌页全局优化－接口页面并行加载"></a>1. 内嵌页全局优化－接口页面并行加载</h3><p>之前内嵌页的开发方式，是在 JS 中发出 Ajax 请求拉取数据，然后使用模版引擎拼接模版，插入到页面中，再由 WebView 进行页面渲染。  </p>
+<p><img src="/css/images/20180625/3.png" alt="之前内嵌页的加载流程">  </p>
+<p>从上图我们可以看到，虽然页面很快就有了占位显示，但是整个操作是<strong>串行</strong>的，需要等到 Ajax 数据返回之后才能看到页面。而这个从 WebView 到发起 Ajax 请求之间的时间是被浪费掉了的。</p>
+<p>如果当 WebView 启动的时候就能发送当前页面的 Ajax 请求，我们的数据就可以提前拿到了，而这样从启动 WebView 到 Ajax 发请求的之间的空闲时间，就被我们利用上了。此时上面的流程就变成了如下的样子： </p>
+<p><img src="/css/images/20180625/4.png" alt="优化之后内嵌页的加载流程">  </p>
+<p>当 WebView 启动的时候，App 根据 Url 地址获取相应的 Ajax 请求的地址，从而提前发出请求，等到页面本身请求发出的时候，拦截 Ajax 并判断是否是已经提前请求过的数据。如果是则基于提前请求的 Ajax 返回的数据渲染页面，如果不是则继续发送 Ajax，等到数据返回之后，再进行页面渲染。</p>
+<p>上述做法，我们充分利用了 App WebView 的启动到 Ajax 发送获取数据之间的时间。接口请求与页面并行加载，加快了页面显示。</p>
+<p><img src="/css/images/20180625/5.png" alt="iOS 端书籍详情页加载对比结果">  </p>
+<p>根据上组数据我们会发现页面显示的平均时间几乎快了 300ms 。在不影响页面正常加载流程的情况下，把串行操作变成并行操作，充分利用空余时间，大大缩短内嵌页白屏时间，让用户更快的看到了我们起点海外 App 的页面内容，效果显著。</p>
+<h3 id="2-详情页加载优化－-localStorage"><a href="#2-详情页加载优化－-localStorage" class="headerlink" title="2. 详情页加载优化－ localStorage"></a>2. 详情页加载优化－ localStorage</h3><p>采用接口与页面资源并行加载的方式，使内嵌页呈现的速度快了很多，但是由于海外用户区域广泛，接口加载时长的不确定，页面还是会有白屏的情况，接下来我们要做的就是特定页面，特殊处理。</p>
+<p>再整个起点海外 App 页面中，详情页访问量相对较大，也是整个站点中比较重要的页面，所以其页面呈现的速度至关重要。因此本次迭代我们主要针对详情页做了特殊处理。</p>
+<p>首先，我们先分析一下详情页的业务形态。书详情页数据相对比较稳定，并不会频繁变化，但接口数据返回需要时间，那我们是不是可以让书详情页的数据先本地存储，以求达到快速显示的效果，并同时发出 Ajax 接口，等到数据返回时再纠正页面上旧的数据。</p>
+<p>关于本地存储，我们引入 localStorage 来进行本地存储，原因如下： </p>
+<ol>
+<li>localStorage 可以存储的数据容量大；  </li>
+<li>localStorage 属于永久性存储；   </li>
+<li>localStorage 目前移动端浏览器支持度良好；</li>
+</ol>
+<p><img src="/css/images/20180625/6.png" alt="详情页引入localStorage后的加载流程">  </p>
+<p>从上图我们可以看到，当用户第一次访问书详情页时，localStorage 中没有相应书籍数据页面按正常逻辑显示，但这时我们会把这份数据缓存到 localStorage 中。当用户第二次访问同一本书的详情页时，我们根据 bookId 的 Key 值在 localStorage 中快速找到相应书详情页信息数据，并基于该缓存数据拼接模版，渲染页面。同时继续发出 Ajax 请求，待数据返回时，与 localStorage 的数据基于 Diff 算法进行对比。如果数据一致，则不做任何处理，不一致则页面基于新数据重新渲染，并且更新 localStorage 中的数据为新的 Ajax 返回数据。具体效果对比图如下，左边是未做二次加速的，右边是使用了二次加速的效果：  </p>
+<p><img src="/css/images/20180625/1.gif" alt="引入 localStorage 后的页面加载对比">  </p>
+<p><img src="/css/images/20180625/7.png" alt="详情页首屏所有数据包括书封显示时间">  </p>
+<p>可以看到页面第一次展示的时候，依然能够明显看到占位图，但是当页面二次打开就直接呈现，效果很明显。</p>
+<h2 id="结尾～～"><a href="#结尾～～" class="headerlink" title="结尾～～"></a>结尾～～</h2><p>做了半年多的 Hybird 页面的前端开发，针对海外版 App 做了很多的优化，为的是给用户带来更好的体验。但对于 Hybird 技术自身的瓶颈，我们也无能为力。所以目前我们团队在尝试从 Hybird 到 React Native 的技术转型，以求能够在用户体验上更进一步。</p>
+<p>同样延续上一次的分享：一个细节的优化是可以决定产品的好坏的，良好的用户体验，会吸引跟多的用户，获得更多的称赞。</p>
+<p>以下是起点海外版的访问地址，请使劲戳戳戳～～～👇 </p>
+<p>起点海外版 App下载：<br>请前往 Google play ／ App Store [ 美区 ] 下载</p>
+<p>起点海外版web站：<a href="https://www.webnovel.com" target="_blank" rel="noopener">https://www.webnovel.com</a></p>
+<p>起点海外版m站：<a href="https://m.webnovel.com" target="_blank" rel="noopener">https://m.webnovel.com</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App/">App</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hybrid/">Hybrid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用户体验/">用户体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/01/20180910/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <p class="article-nav-title">
+        
+          面向体验的重构优化
+        
+      </p>
+    </a>
+  
+  
+    <a href="/2018/06/15/20180615/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <p class="article-nav-title">阅读体验优化之起点阅读页</p>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'fa1c26ca3c2d7b094b20',
+    clientSecret: 'eed998812f911c13e5c832a4ec9b346160e2662f',
+    id: window.location.pathname,
+    repo: 'yuewen-yux.github.io',
+    owner: 'yuewen-yux',
+    admin: 'yuewen-yux',
+    distractionFreeMode: 'true'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+</section>
+        
+        
+      </div>
+      <footer id="footer">
+    
+        
+<aside id="sidebar" class="outer">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AMP/">AMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hybrid/">Hybrid</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React-Native/">React Native</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/animation/">animation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/无障碍访问/">无障碍访问</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/22/20190522/">关于 AMP Story，你需要知道这些</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/14/20190514/">关于 AMP，Webnovel 都做了些什么？</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/19/20190419/">Google AMP WebPackage 在 Webnovel 的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+
+    
+    <div class="outer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+                <div class="footer-grid-col">
+                    <div class="footer-items">
+                    <a class="footer-item" href>GITHUB</a>
+                    <a class="footer-item" href>掘金</a>
+                    <a class="footer-item" href>知乎</a>
+                    <a class="footer-item" href>微信公众号</a>
+                    </div>
+                </div>
+                <div class="footer-grid-col">
+                    <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YFE All Rights Reserved</p>
+                    <!--<p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="/fancybox/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+  </body>
+</html>

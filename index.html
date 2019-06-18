@@ -33,14 +33,13 @@
   <div id="header-outer" class="outer">
     <div id="header-inner" class="inner">
       <a id="logo" href="/">&lt;YFE /&gt;</a>
+      <h1 id="logo-txt">阅文前端团队</h1>
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
           <a class="main-nav-link" href="/">主页</a>
         
           <a class="main-nav-link" href="/archives">归档</a>
-        
-          <a class="main-nav-link" href="/tags">标签</a>
         
       </nav>
     </div>
@@ -51,7 +50,7 @@
         
         <section id="main">
   
-    <article id="post-introduce" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-20190522" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
     
@@ -59,41 +58,499 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/03/03/introduce/">引用：阅世界，阅无界</a>
+      <a class="article-title" href="/2019/05/22/20190522/">关于 AMP Story，你需要知道这些</a>
     </h1>
   
 
       </header>
     
     <div class="article-meta">
-      <a href="/2019/03/03/introduce/" class="article-date">
-  <time datetime="2019-03-03T04:30:16.000Z" itemprop="datePublished">2019-03-03</time>
+      <a href="/2019/05/22/20190522/" class="article-date">
+  <time datetime="2019-05-21T16:00:00.000Z" itemprop="datePublished">2019-05-22</time>
 </a>
 
       
   <!--<div class="article-category">-->
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+    <a class="article-category-link" href="/categories/AMP/">AMP</a>
   <!--</div>-->
 
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>讲到 <a href="https://baike.baidu.com/item/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/4916400?fr=aladdin" title="外文名：Wechat Official Account，隶属企业“腾讯公司”" target="_blank" rel="noopener">公众号编辑器</a>，</p>
-<p><em>最大的痛点</em>就是人工排版，用了那么多第三方编辑器都各有自己的弊端，不是字体不好看，就是列表还需要手动刷一遍，</p>
-<p>一不小心操作失误发出去格式出问题的文章还无法挽回，所以痛定思痛，干脆寻找开源代码在内网工具上创建一个格式化编辑器，</p>
-<p>目标是编写文章做到工程化发布，解放排版人力，目前已经支持修改字体、字号、文章样式。</p>
-<h2 id="以下是一些用法演示"><a href="#以下是一些用法演示" class="headerlink" title="以下是一些用法演示"></a>以下是一些用法演示</h2><p>使用时，你得把默认的 Markdown 内容换成你自己的内容。</p>
+        <p>在我们的 AMP 改版 过程中，我们发现了一些新的 AMP 组件，并针对部分组件做了一些尝试。其中就包括 AMP Story。AMP Story 是 AMP 的一种新的网页展现形式。</p>
+<h2 id="成果展示"><a href="#成果展示" class="headerlink" title="成果展示"></a>成果展示</h2><p>在介绍 AMP Story 之前，大家可以先看一下，我们基于 AMP Story 技术做的一个 Demo 页面。下面是我们做的一个关于 Tour Of Wenbovel 主题的一个 AMP Story 页面。对用户来说，与传统的单纯文字和图片不一样，它提供了一种沉浸式的 Web 体验。</p>
+<p><a href="https://uploader.shimo.im/f/eFps8kovb70DCuXO.mp4" target="_blank" rel="noopener">1.mp4</a></p>
+<p><img src="https://uploader.shimo.im/f/XSCYMSje3zsEKX6v.png!thumbnail" alt="图片"><br>「Webnovel 的 AMP Story 页面，<a href="https://m.webnovel.com/amp/tour_of_webnovel" target="_blank" rel="noopener">Tour of Webnovel</a>」</p>
         
           <p class="article-more-link">
-            <a href="/2019/03/03/introduce/#more">Read More >> </a>
+            <a href="/2019/05/22/20190522/#more">Read More >> </a>
           </p>
         
       
     </div>
     <footer class="article-footer">
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apm/">apm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flutter/">flutter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http2/">http2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pwa/">pwa</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rn/">rn</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMP/">AMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20190514" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/14/20190514/">关于 AMP，Webnovel 都做了些什么？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2019/05/14/20190514/" class="article-date">
+  <time datetime="2019-05-13T16:00:00.000Z" itemprop="datePublished">2019-05-14</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/AMP/">AMP</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>AMP 是什么？它全称 Accelerated Mobile Pages 「AMP」，是 Google 推出的一个加速网页加载的开源框架，我们在此也不做太多的介绍，具体可以看我们之前发的<a href="https://juejin.im/post/5cb97f446fb9a0686362dd22" target="_blank" rel="noopener">公众号文章</a>。阅文前端团队作为国内最早践行 AMP 的开发团队之一，我们的 AMP 实践也经历了好几个大迭代，其成果也得到了 Google 官方的肯定，分别在 Google I/O 2019 和  AMP Conf 2019 大会上被 feature（图1-1），希望我们积累的经验可以给大家提供帮助。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c9a9172d0?w=1920&amp;h=1237&amp;f=png&amp;s=1499444" alt="图片"></p>
+<p><img src="https://user-gold-cdn.xitu.io/2019/5/14/16ab4f2c3025c747?w=1920&amp;h=870&amp;f=png&amp;s=604565" alt="图片"><br>「图 1-1：阅文集团在 Google I/O 大会、AMP conf 2019 被 feature」<br>
+        
+          </p><p class="article-more-link">
+            <a href="/2019/05/14/20190514/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMP/">AMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20190419" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/19/20190419/">Google AMP WebPackage 在 Webnovel 的应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2019/04/19/20190419/" class="article-date">
+  <time datetime="2019-04-18T16:00:00.000Z" itemprop="datePublished">2019-04-19</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/AMP/">AMP</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前我们的文章（文章链接）也有介绍过，Webnovel （起点海外）在去年年初就将首页以及全部阅读页都接入了 Google 的 AMP 技术，并且从体验和数据上来说都取得了不错的效果。在去年年底我们又进行了一次迭代，把更多的阅读页内容也加入到了 AMP 当中。用户可以在 Google Search 当中搜索到我们的小说内容，并且很快就可以进行阅读。但是同时我们也发现了一些问题，用户在搜索结果的第一个落地页显示的内容是我们的，但是 URL 却是 Google 的 URL。虽然 Google 在顶部加了一个 m.webnovel.com 来源的标识，但是很多用户依然会误解，并且给我们的统一品牌宣传带来了影响。</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/04/19/20190419/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMP/">AMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20180801" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/08/01/20180801/" class="article-date">
+  <time datetime="2018-07-31T16:00:00.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/React-Native/">React Native</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>经历了三个多月的集中开发，阅文集团旗下二次元产品「元气阅读」APP 终于在各大应用商店上架了。「元气阅读」APP 大部分的功能模块基于 <a href="https://github.com/facebook/react-native" target="_blank" rel="noopener">React Native</a> 开发，整个开发过程前端团队趟了不少 React Native 的坑，同时也积累了不少实践心得，与大家一起分享。</p>
+<h2 id="一、业务背景与技术选型"><a href="#一、业务背景与技术选型" class="headerlink" title="一、业务背景与技术选型"></a>一、业务背景与技术选型</h2><p>在使用 React Native （以下简称RN）之前，和业界大部分团队一样， 我们 APP 的开发模式采用的是客户端（iOS/Android）内嵌 H5 的 Hybrid 开发模式。一开始，我们除了采用比较成熟的离线包方案管理静态资源，在首屏加载体验上我们也做了不少优化工作，但发现 H5 线上的体验和性能数据与原生还是有不少差距，所以我们决定引入新方案。</p>
+<p>RN 和 Weex 已经是业界两个相对成熟的 Hybrid 解决方案，基本能满足我们的需求：</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/08/01/20180801/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App/">App</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hybrid/">Hybrid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React-Native/">React Native</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20180622" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/08/01/20180622/" class="article-date">
+  <time datetime="2018-07-31T16:00:00.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/UI/">UI</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="你问我有什么不同？"><a href="#你问我有什么不同？" class="headerlink" title="你问我有什么不同？"></a>你问我有什么不同？</h4><p>只是更自由，更纯粹，和用户走得更近。</p>
+<p>官方网站：<a href="https://l-ui.com/" target="_blank" rel="noopener">https://l-ui.com/</a></p>
+<p>项目主页：<a href="https://github.com/yued-fe/lulu" target="_blank" rel="noopener">https://github.com/yued-fe/lulu</a></p>
+<p>API文档：<a href="https://l-ui.com/content/about/design.html" target="_blank" rel="noopener">LuLu UI API中文文档</a></p>
+<h3 id="你好，LuLu！"><a href="#你好，LuLu！" class="headerlink" title="你好，LuLu！"></a>你好，LuLu！</h3><p>LuLu UI 是一个基于 jQuery，针对 PC 网站，兼容 IE8+ 或 IE7+ 的前端 UI 框架，包含 20+ 静态或动态 UI 组件。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/08/01/20180622/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LuLu/">LuLu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UI/">UI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/屏幕阅读器/">屏幕阅读器</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/无障碍访问/">无障碍访问</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/框架/">框架</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用户体验/">用户体验</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/键盘/">键盘</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20180910" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/01/20180910/">面向体验的重构优化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/08/01/20180910/" class="article-date">
+  <time datetime="2018-07-31T16:00:00.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/性能优化/">性能优化</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前端重构程序员是一个关注代码同时还要留意体验的异类。代码的优化虽然难，但是有比较多的性能测试工具去证明优化的成果。然而体验这种东西，我们又要如何去证明它的好与坏呢？</p>
+<p>一、视觉体验优化</p>
+<ol>
+<li>页面加载</li>
+<li>数据请求</li>
+<li>图片渲染</li>
+</ol>
+<p>二、数据证明体验效果  </p>
+<p>今天我着重会基于「webnovel」PC站点从以上两点给大家介绍，如何从体验的角度去做重构的优化，并如何用数据去证明你的优化是有效果的。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/08/01/20180910/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/性能优化/">性能优化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用户体验/">用户体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20180625" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/25/20180625/">起点海外版 Hybrid App－内嵌页优化实践</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/06/25/20180625/" class="article-date">
+  <time datetime="2018-06-24T16:00:00.000Z" itemprop="datePublished">2018-06-25</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/Hybrid/">Hybrid</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。</p>
+<p>目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能和用户体验。</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/06/25/20180625/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App/">App</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hybrid/">Hybrid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用户体验/">用户体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20180615" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/15/20180615/">阅读体验优化之起点阅读页</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/06/15/20180615/" class="article-date">
+  <time datetime="2018-06-14T16:00:00.000Z" itemprop="datePublished">2018-06-15</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/javascript/">javascript</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>阅读页作为小说阅读类网站访问量很高的页面，阅读体验上的优化是至关重要的。我有幸在起点项目中负责阅读页的前端开发，成就感满满。   </p>
+<p>起点中文网访问地址：<a href="https://www.qidian.com" target="_blank" rel="noopener">https://www.qidian.com</a> ，欢迎体验！</p>
+<p>在整个起点项目已经有很完善的性能优化体系的情况下，阅读页在改版之后，页面性能统计数据如下：</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibvnLOLaqNfAj0ove7lsZnAlRibol903KFNyaeCvQg5H2NeEL0AjibF8xw/640?wx_fmt=png" alt></p>
+        
+          <p class="article-more-link">
+            <a href="/2018/06/15/20180615/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scroll/">scroll</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数截流/">函数截流</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用户体验/">用户体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20180607" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/07/20180607/">动效是种浪漫－起点国际浪漫之旅</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/06/07/20180607/" class="article-date">
+  <time datetime="2018-06-06T16:00:00.000Z" itemprop="datePublished">2018-06-07</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/animation/">animation</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>经过短暂的迭代，起点国际版 PC，iOS，Android，M站都已火速上线，喜大普奔，普天同庆。</p>
+<p><img src="/css/images/20180607/1.png" alt></p>
+<p>一个偏体验的前端程序员，今天要谈的不是代码而是起点国际的动效。</p>
+<p>什么？你还不知道我说的是什么？</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/06/07/20180607/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/animation/">animation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-20180604" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/04/20180604/">哇牛叉学院之基于 VoiceOver 的移动端无障碍阅读访问</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2018/06/04/20180604/" class="article-date">
+  <time datetime="2018-06-03T16:00:00.000Z" itemprop="datePublished">2018-06-04</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/无障碍访问/">无障碍访问</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本集出场人物：米亚、起床气、5号、阿力、软大<br>特别感谢：馒头</p>
+<p>今日，学院布置了一个新任务，要去佘山拜访一位名为『飞天蝙蝠』的前辈，亲自上门取一件重要的宝物。并特别指定了『米亚』『起床气』『5号』三个感知型同学前往，同时安排『阿力』一同前往，保护诸位同学以及宝物的安全护送。至于这个宝物是什么，上面并没有明说，只是说到了那里自然就会知道。</p>
+<p>按照地图指引，穿过眉公钓鱼矶，黄巢洞，远远就看到一座古味浓郁的联排建筑，走近一看，『飞天山庄』，哈，就是这里，正要敲门，突然就传来缓慢但略显尖利的声音：「来着何人？」 </p>
+<p>「前辈你好，我们是『哇牛叉学院』的学生，过来拜访前辈，顺便取一件宝物。」</p>
+<p>「亮出凭证。」</p>
+        
+          <p class="article-more-link">
+            <a href="/2018/06/04/20180604/#more">Read More >> </a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Mobile/">Mobile</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VoiceOver/">VoiceOver</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/无障碍访问/">无障碍访问</a></li></ul>
 
     </footer>
   </div>
@@ -104,6 +561,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页 &raquo;</a>
+  </nav>
 
 </section>
         
@@ -118,7 +580,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AMP/">AMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hybrid/">Hybrid</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React-Native/">React Native</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/animation/">animation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/无障碍访问/">无障碍访问</a></li></ul>
     </div>
   </div>
 
@@ -131,7 +593,23 @@
       <ul>
         
           <li>
-            <a href="/2019/03/03/introduce/">引用：阅世界，阅无界</a>
+            <a href="/2019/05/22/20190522/">关于 AMP Story，你需要知道这些</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/14/20190514/">关于 AMP，Webnovel 都做了些什么？</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/19/20190419/">Google AMP WebPackage 在 Webnovel 的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
           </li>
         
       </ul>
@@ -157,7 +635,7 @@
                 </div>
                 <div class="footer-grid-col">
                     <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YFE All Rights Reserved</p>
-                    <p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+                    <!--<p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>-->
                 </div>
 
             </div>
@@ -171,8 +649,6 @@
     <a href="/" class="mobile-nav-link">主页</a>
   
     <a href="/archives" class="mobile-nav-link">归档</a>
-  
-    <a href="/tags" class="mobile-nav-link">标签</a>
   
 </nav>
     

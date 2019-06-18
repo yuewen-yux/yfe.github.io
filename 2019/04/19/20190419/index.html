@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Google AMP WebPackage 在 Webnovel 的应用 | YFE BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="之前我们的文章（文章链接）也有介绍过，Webnovel （起点海外）在去年年初就将首页以及全部阅读页都接入了 Google 的 AMP 技术，并且从体验和数据上来说都取得了不错的效果。在去年年底我们又进行了一次迭代，把更多的阅读页内容也加入到了 AMP 当中。用户可以在 Google Search 当中搜索到我们的小说内容，并且很快就可以进行阅读。但是同时我们也发现了一些问题，用户在搜索结果的第一">
+<meta name="keywords" content="AMP,Webnovel,Google">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google AMP WebPackage 在 Webnovel 的应用">
+<meta property="og:url" content="http://yoursite.com/2019/04/19/20190419/index.html">
+<meta property="og:site_name" content="YFE BLOG">
+<meta property="og:description" content="之前我们的文章（文章链接）也有介绍过，Webnovel （起点海外）在去年年初就将首页以及全部阅读页都接入了 Google 的 AMP 技术，并且从体验和数据上来说都取得了不错的效果。在去年年底我们又进行了一次迭代，把更多的阅读页内容也加入到了 AMP 当中。用户可以在 Google Search 当中搜索到我们的小说内容，并且很快就可以进行阅读。但是同时我们也发现了一些问题，用户在搜索结果的第一">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/css/images/20190419/1.jpg">
+<meta property="og:image" content="http://yoursite.com/css/images/20190419/2.jpg">
+<meta property="og:image" content="http://yoursite.com/css/images/20190419/3.jpg">
+<meta property="og:image" content="http://yoursite.com/css/images/20190419/4.jpg">
+<meta property="og:image" content="http://yoursite.com/css/images/20190419/5.jpg">
+<meta property="og:updated_time" content="2019-06-18T09:55:29.617Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Google AMP WebPackage 在 Webnovel 的应用">
+<meta name="twitter:description" content="之前我们的文章（文章链接）也有介绍过，Webnovel （起点海外）在去年年初就将首页以及全部阅读页都接入了 Google 的 AMP 技术，并且从体验和数据上来说都取得了不错的效果。在去年年底我们又进行了一次迭代，把更多的阅读页内容也加入到了 AMP 当中。用户可以在 Google Search 当中搜索到我们的小说内容，并且很快就可以进行阅读。但是同时我们也发现了一些问题，用户在搜索结果的第一">
+<meta name="twitter:image" content="http://yoursite.com/css/images/20190419/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="YFE BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <a id="logo" href="/">&lt;YFE /&gt;</a>
+      <h1 id="logo-txt">阅文前端团队</h1>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        
+        <section id="main"><article id="post-20190419" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Google AMP WebPackage 在 Webnovel 的应用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2019/04/19/20190419/" class="article-date">
+  <time datetime="2019-04-18T16:00:00.000Z" itemprop="datePublished">2019-04-19</time>
+</a>
+
+      
+  <!--<div class="article-category">-->
+    <a class="article-category-link" href="/categories/AMP/">AMP</a>
+  <!--</div>-->
+
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前我们的文章（文章链接）也有介绍过，Webnovel （起点海外）在去年年初就将首页以及全部阅读页都接入了 Google 的 AMP 技术，并且从体验和数据上来说都取得了不错的效果。在去年年底我们又进行了一次迭代，把更多的阅读页内容也加入到了 AMP 当中。用户可以在 Google Search 当中搜索到我们的小说内容，并且很快就可以进行阅读。但是同时我们也发现了一些问题，用户在搜索结果的第一个落地页显示的内容是我们的，但是 URL 却是 Google 的 URL。虽然 Google 在顶部加了一个 m.webnovel.com 来源的标识，但是很多用户依然会误解，并且给我们的统一品牌宣传带来了影响。</p>
+<a id="more"></a>
+<p><img src="/css/images/20190419/1.jpg" alt="图1：传统的 Google AMP 页面"></p>
+<p>显然 Google AMP 团队也注意到了这一点，在去年年底的时候推出了 AMP WebPackage 技术来解决这个问题。</p>
+<h2 id="WebPackage-背景"><a href="#WebPackage-背景" class="headerlink" title="WebPackage 背景"></a>WebPackage 背景</h2><p>讲到 Package，大家可能想到的都是 Webpack，Rollup，Parcel 这些打包工具。而我们这次讲的是 Web Package。Web Package 解决了什么问题呢？它可以让你把你的文件打包给第三方，但是浏览器访问的时候却可以识别出来你真实的域名。我想很多同学第一反应就是想到 CDN，因为现在 CDN 都是托管在第三方的云厂商，为了在云厂商配置我们自己的域名，我们必须把自己的证书私钥配置在云厂商的后台管理页面上，这样可以实现用户访问的是云厂商的 CDN 服务器但是显示的却是我们自己的域名。这种操作带来两个问题，一个是存在着被第三方云厂商泄漏我们证书私钥的风险，另一个是证书过期的时候要记得去第三方平台更新。而 Web Package 就是用来解决这些问题的。</p>
+<p>Web Package 的这个特性也正好可以用来解决我们上面发现的问题。</p>
+<p>之前的 Google AMP 技术可以让用户在 Google Search 搜索结果页面当中非常迅速地进入到搜索结果页面。为了保证加载速度尽可能地快，Google Search 其实是将符合 AMP 标准的页面缓存进 Google 的 CDN 当中，当命中搜索结果的时候，再从 Google CDN 中加载进来，从而保证了非常快的加载速度。这其实跟我们平常使用 CDN 加速是一样的。必然会带来一个问题，就是展示出来的页面 URL 是 Google 的地址，而非我们自己的域名地址。就如图 1 所示。</p>
+<p>为了解决上面的问题，让用户有更好的体验，Google AMP 团队在去年将 Web Package 引入到了 <a href="https://blog.amp.dev/2018/11/13/developer-preview-of-better-amp-urls-in-google-search/" target="_blank" rel="noopener">AMP 技术</a>当中。我们也有幸成为了首批接入这个技术的国内发布商。在昨天刚刚结束的 Google AMP 2019 会议上，也得到了 Google 官方的认可。</p>
+<p><img src="/css/images/20190419/2.jpg" alt="图 2：AMP Conf 2019 SXG Partners"></p>
+<h2 id="实现-Web-Package-中的-Signed-HTTP-Exchanges"><a href="#实现-Web-Package-中的-Signed-HTTP-Exchanges" class="headerlink" title="实现 Web Package 中的 Signed-HTTP-Exchanges"></a>实现 Web Package 中的 Signed-HTTP-Exchanges</h2><p>在接入 AMP Web Package 过程中，最重要的一步是将我们的内容返回给 Google 爬虫，而这些内容是需要使用我们的证书进行加密的，这个技术称为 <strong>Signed-HTTP-Exchanges</strong> (缩写为 SXG)。下面我们将详细介绍如何实现 SXG 并最终在从 Google Search 结果无缝浏览我们的站点。</p>
+<p><img src="/css/images/20190419/3.jpg" alt="图 3：AMP SXG VS AMP"></p>
+<p>整个操作不算复杂，一共分为以下三步：</p>
+<h3 id="1-从你的-CA-厂商那获取一个支持-SXG-的证书"><a href="#1-从你的-CA-厂商那获取一个支持-SXG-的证书" class="headerlink" title="1. 从你的 CA 厂商那获取一个支持 SXG 的证书"></a>1. 从你的 CA 厂商那获取一个支持 SXG 的证书</h3><p>这是最重要的一步。如上所述，返回给 Google 爬虫的内容需要使用证书进行非对称加密。而这个证书是必须拥有一个 SXG 的扩展。截止此文章发布日期，只有 Digicert 证书颁发商是支持颁布此类型证书的。并且此证书必须使用 EC 密钥（非 RSA 密钥）以及 prime256v1 算法生成。</p>
+<p>需要注意的是，这个证书仅用来给返回谷歌爬虫的 AMP 文档进行加密。之前接入层是什么证书依旧使用什么证书，是没有影响的（需要注意生成新证书不能导致现在在用的旧证书被颁发商吊销）。</p>
+<h3 id="2-在服务器上按照-amppackage-官方步骤部署-amppkg"><a href="#2-在服务器上按照-amppackage-官方步骤部署-amppkg" class="headerlink" title="2. 在服务器上按照 amppackage 官方步骤部署 amppkg"></a>2. 在服务器上按照 amppackage 官方步骤部署 amppkg</h3><p>部署 amppkg 没有什么值得说明的，唯一需要注意的是 amppkg 的配置文件。要捕获请求参数的时候需要加上 <code>QueryRE = “.*”</code>，其他也没有要特别注意的。</p>
+<pre><code>amppkg.toml
+----------
+Port = &apos;port listening&apos;
+CertFile = &apos;path/to/fullchain.pem&apos; # SXG cert from your CA
+KeyFile = &apos;path/to/privkey.pem&apos; # SXG cert key
+OCSPCache = &apos;/tmp/amppkg-ocsp&apos;
+[[URLSet]]
+[URLSet.Sign]
+Domain = &quot;amppackageexample.com&quot;
+QueryRE = &quot;.*&quot; # to capture query string
+</code></pre><h3 id="3-配置-AMP-SXG-回源"><a href="#3-配置-AMP-SXG-回源" class="headerlink" title="3. 配置 AMP SXG 回源"></a>3. 配置 AMP SXG 回源</h3><p>下面是简单的 AMP SXG 回源的架构图。</p>
+<p><img src="/css/images/20190419/4.jpg" alt></p>
+<p>然后就是配置回源接入层了，为了更详细描述这个问题，我们画一个 Webnovel AMP 的回源流程图。</p>
+<p><img src="/css/images/20190419/5.jpg" alt="图 4：Webnovel AMP SXG 数据流程图"></p>
+<p>现在 Google 爬虫抓取 SXG 加密的 AMP 文档会有两次请求操作。第一次是一个正常的爬取操作，如果后台是支持给 SXG 加密的 AMP 内容文件的，则可以在返回的 header 头上加上 <code>Vary: AMP-Cache-Transform,Accept</code>，Google 爬虫识别到这个 header 头之后就可以进行第二次爬取操作，并且会在 header 头上带上 <code>AMP-Cache-Transform: google</code> 用来跟第一次爬取操作进行区分。我们的接入层反向代理在识别到这个头部之后，将请求转发到对应的 amppkg server，amppkg server 将对应的内容返回给爬虫即可。</p>
+<p>虽然我们给 amppkg server 配置了一个证书，但是这个证书仅用来对内容进行加密，连接是不加密的。所以我们的反向代理转发到 amppkg server 依然用 http 而非 https。</p>
+<pre><code>upstream amppkg { proxy_pass http://IP:PORT; }
+upstream webnovelBackend { proxy_pass http://IP:PORT; }
+location ^~ /amp/ {
+    if ($http_amp_cache_transform = &quot;google&quot;) {
+        rewrite ^/(.*)$ /ampSXG/$1 last;
+        break;
+    }
+    # allow google to fetch SXG (Signed Exchange AMP HTML)
+    add_header Vary &quot;AMP-Cache-Transform, Accept&quot;;
+    proxy_pass         http://webnovelBackend;
+}
+location ^~ /ampSXG/ {
+    # some detail omitted
+    proxy_pass         http://amppkg/priv/doc/https://m.webnovel.com/; 
+}
+# this location is for browser to get cert for verifying SXG document
+location ^~ /amppkg/ {
+    proxy_pass         http://amppkg/amppkg/;
+}
+</code></pre><p>到了这里就完成了整个后台的配置，可以用官方提供的方法来进行验证。要想正式环境（Chrome 73 以及以上才支持 SXG 功能）验证就需要等待一段时间，让 Google 爬虫来爬取这些 SXG 加密的 AMP 文档内容了。</p>
+<h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2><p>下面是 Webnovel 在实现 SXG 之后的一个演示视频。</p>
+<video id="video" controls preload="none" poster><br>  <source id="mp4" src="/css/images/20190419/1.mpg" type="video/mp4"><br></video>
+
+<p>接入了 AMP Packager 之后的  AMP 和之前有什么区别呢？虽然我们的数据还不够多，但是我们分析结果看来，最终跳出率，以及每 session 浏览的页面数对比之前都得到了比较好的优化。待 Chrome 73+版本得到更多普及之后数据会更加明显，后续再跟大家进行分享。</p>
+<p><strong>Tips:</strong> 有一个小技巧，正常情况下从 Google Search 引流过来的用户只能享受第一个落地页面的 Google Cache 加速。后续就是我们自己网站的内容了，需要我们自己进行接入优化。但是很多时候在全球化的接入能力上，我们相对 Google 来说还是偏弱的。有没有什么办法让用户尽可能地都浏览 Google Cache 缓存里面的页面呢？在用户需要进行一些进一步操作的时候，我们再切到我们自己的页面。我们研究了一下发现还是可行的。我们的 AMP 页面对应 Google Cache 中的地址是有一个映射关系，比如说我们的 Webnovel AMP SXG 首页对应 Google Cache 缓存的地址就是 <a href="https://m-webnovel-com.ampproject.org/wp/s/m.webnovel.com/amp/" target="_blank" rel="noopener">https://m-webnovel-com.ampproject.org/wp/s/m.webnovel.com/amp/</a> ，我们在页面当中跳转的 AMP SXG 页面都换成对应的 Google Cache 地址就满足了我们的需求，即有效利用了 Google Cache 又让用户像在我们自己站点上操作一样。<br>视频如下：</p>
+<video id="video" controls preload="none" poster><br>  <source id="mp4" src="/css/images/20190419/2.mp4" type="video/mp4"><br></video>
+
+<h2 id="引用文章："><a href="#引用文章：" class="headerlink" title="引用文章："></a>引用文章：</h2><ol>
+<li><a href="https://medium.com/@lewpengfeifei/ways-to-implement-signed-http-exchanges-with-google-amp-5ad1ce92e1e" target="_blank" rel="noopener">https://medium.com/@lewpengfeifei/ways-to-implement-signed-http-exchanges-with-google-amp-5ad1ce92e1e</a></li>
+<li><a href="https://github.com/ampproject/amppackager" target="_blank" rel="noopener">https://github.com/ampproject/amppackager</a></li>
+<li><a href="https://www.digicert.com/account/ietf/http-signed-exchange.php" target="_blank" rel="noopener">https://www.digicert.com/account/ietf/http-signed-exchange.php</a></li>
+<li><a href="https://github.com/WICG/webpackage/tree/master/go/signedexchange" target="_blank" rel="noopener">https://github.com/WICG/webpackage/tree/master/go/signedexchange</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMP/">AMP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google/">Google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/14/20190514/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <p class="article-nav-title">
+        
+          关于 AMP，Webnovel 都做了些什么？
+        
+      </p>
+    </a>
+  
+  
+    <a href="/2018/08/01/20180801/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <p class="article-nav-title">React Native 在元气阅读的实践</p>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'fa1c26ca3c2d7b094b20',
+    clientSecret: 'eed998812f911c13e5c832a4ec9b346160e2662f',
+    id: window.location.pathname,
+    repo: 'yuewen-yux.github.io',
+    owner: 'yuewen-yux',
+    admin: 'yuewen-yux',
+    distractionFreeMode: 'true'
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+</section>
+        
+        
+      </div>
+      <footer id="footer">
+    
+        
+<aside id="sidebar" class="outer">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AMP/">AMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hybrid/">Hybrid</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React-Native/">React Native</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/animation/">animation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/无障碍访问/">无障碍访问</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/22/20190522/">关于 AMP Story，你需要知道这些</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/14/20190514/">关于 AMP，Webnovel 都做了些什么？</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/19/20190419/">Google AMP WebPackage 在 Webnovel 的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+
+    
+    <div class="outer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+                <div class="footer-grid-col">
+                    <div class="footer-items">
+                    <a class="footer-item" href>GITHUB</a>
+                    <a class="footer-item" href>掘金</a>
+                    <a class="footer-item" href>知乎</a>
+                    <a class="footer-item" href>微信公众号</a>
+                    </div>
+                </div>
+                <div class="footer-grid-col">
+                    <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YFE All Rights Reserved</p>
+                    <!--<p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="/fancybox/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+  </body>
+</html>
