@@ -150,6 +150,8 @@ body {
   float: left;
   width: 97.77777777777777%;
   margin: 0 1.111111111111111%;
+  width: 100%;
+  margin: 0;
 }
 .left,
 .alignleft {
@@ -367,7 +369,6 @@ body {
   left: 0;
   margin-top: -20px;
 }
-#logo,
 #subtitle {
   text-decoration: none;
   color: #fff;
@@ -376,6 +377,22 @@ body {
 }
 #logo {
   letter-spacing: 2px;
+  float: left;
+}
+#logo:before,
+#logo:after {
+  content: "";
+  display: table;
+}
+#logo:after {
+  clear: both;
+}
+@media screen and (max-width: 479px) {
+  #logo {
+    float: right;
+  }
+}
+#logo-img {
   float: left;
   width: 42px;
   height: 42px;
@@ -388,16 +405,18 @@ body {
   border-radius: 50%;
 }
 @media screen and (max-width: 479px) {
-  #logo {
+  #logo-img {
     float: right;
   }
 }
 #logo-txt {
   float: left;
   font-weight: 700;
-  margin-left: 10px;
+  padding-left: 10px;
   font-size: 1.5em;
   line-height: 60px;
+  text-decoration: none;
+  color: #333;
 }
 @media screen and (max-width: 479px) {
   #logo-txt {
@@ -425,11 +444,11 @@ body {
   font-family: FontAwesome;
   opacity: 0.6;
   text-align: center;
-  font-size: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
   line-height: 20px;
-  padding: 20px 15px;
+  padding: 20px;
   position: relative;
   cursor: pointer;
 }
@@ -472,6 +491,12 @@ body {
 }
 #nav-rss-link:before {
   content: "\f09e";
+}
+#nav-search-btn {
+  float: right;
+  height: 20px;
+  color: #000;
+  text-decoration: none;
 }
 #nav-search-btn:before {
   content: "\f002";
@@ -543,7 +568,9 @@ body {
   overflow: hidden;
 }
 .article-meta {
-  padding: 20px 15px 0;
+  padding: 20px 20px 0;
+  font-size: 0.8em;
+  line-height: 1.4em;
 }
 .article-meta:before,
 .article-meta:after {
@@ -554,21 +581,27 @@ body {
   clear: both;
 }
 .article-date {
-  float: leftarticle-date;
+  margin-left: 0;
+  margin-bottom: 0;
+  margin-right: 0.5rem;
+  line-height: 1.4em;
 }
 .article-category {
-  float: left;
   line-height: 1em;
   color: #ccc;
   text-shadow: 0 1px #fff;
   margin-left: 8px;
+  line-height: 1.4em;
 }
 .article-category:before {
   content: "\2022";
 }
 .article-category-link {
-  margin: 0 12px 1em;
+  margin-right: 0.5em;
+  margin-bottom: 0;
+  margin-left: 0;
   color: #3385ff;
+  line-height: 1.4em;
 }
 .article-category-link:hover {
   color: #3385ff;
@@ -587,6 +620,11 @@ body {
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
   transition: color 0.2s;
+}
+@media screen and (max-width: 479px) {
+  .article-title {
+    font-size: 1.8em;
+  }
 }
 a.article-title:hover {
   color: #3385ff;
@@ -756,17 +794,55 @@ a.article-title:hover {
 }
 .article-tag-list-item .article-tag-list-link {
   display: block;
-  border: 1px solid #3385ff;
-  color: #3385ff;
-  padding: 0 12px;
-  border-radius: 4px;
-}
-.article-tag-list-item .article-tag-list-link:before {
-  content: "#";
-}
-.article-tag-list-item .article-tag-list-link:hover {
   background: #3385ff;
   color: #fff;
+  padding: 5px 10px;
+  margin: 0 2px 0 8px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  -webkit-transform-origin: 0% 50%;
+  -webkit-animation: swing 1s;
+  -o-animation: swing 1s;
+  -webkit-animation: swing 1s;
+  -moz-animation: swing 1s;
+  -ms-animation: swing 1s;
+  animation: swing 1s;
+  text-decoration: none;
+  font-size: 12px !important;
+  height: 17px;
+  line-height: 17px;
+}
+.article-tag-list-item .article-tag-list-link:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  background: inherit;
+  height: 8px;
+  border: 10px solid #fafafa;
+  border-right-color: transparent;
+  -webkit-border-radius: 10px 0 0 10px;
+  -moz-border-radius: 10px 0 0 10px;
+  border-radius: 10px 0 0 10px;
+  left: -20px;
+  top: 0;
+}
+.article-tag-list-item .article-tag-list-link:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+  position: absolute;
+  left: -3px;
+  top: 11px;
+  -webkit-box-shadow: inset 1px 1px 0 #ccc;
+  box-shadow: inset 1px 1px 0 #ccc;
+}
+.article-tag-list-item .article-tag-list-link:hover {
+  text-decoration: underline;
 }
 .article-comment-link {
   float: right;
@@ -785,6 +861,13 @@ a.article-title:hover {
   content: "\f064";
   font-family: FontAwesome;
   padding-right: 6px;
+}
+.article-statement {
+  margin: 0 20px 1.4em;
+  padding: 0.2em 1em;
+  color: #646464;
+  border-left: 3px solid #d3d3d3;
+  font-family: Georgia, "Times New Roman", serif;
 }
 #article-nav {
   position: relative;
@@ -1103,10 +1186,16 @@ a.article-title:hover {
 }
 #page-nav .prev,
 #page-nav .next {
-  display: inline-block;
   padding: 0 20px;
   margin: 0 5px;
   height: 36px;
+  display: none;
+}
+@media screen and (max-width: 479px) {
+  #page-nav .prev,
+  #page-nav .next {
+    display: inline-block;
+  }
 }
 #page-nav .prev:hover,
 #page-nav .next:hover {
@@ -1116,8 +1205,9 @@ a.article-title:hover {
   height: 36px;
   width: 36px;
   line-height: 36px;
+  border: 1px solid #3385ff;
+  border-radius: 4px;
   margin: 0 5px;
-  border-radius: 50%;
   display: inline-block;
 }
 @media screen and (max-width: 479px) {
@@ -1150,9 +1240,6 @@ a.article-title:hover {
 #footer a:hover {
   text-decoration: underline;
 }
-#footer .outer {
-  overflow: hidden;
-}
 #footer .footer-container {
   margin: 0 auto;
 }
@@ -1175,6 +1262,7 @@ a.article-title:hover {
   text-align: right;
 }
 #footer .footer-item {
+  position: relative;
   display: inline-block;
   margin-right: 20px;
   font-family: Montserrat, sans-serif;
@@ -1182,6 +1270,23 @@ a.article-title:hover {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   text-align: left;
+}
+#footer .footer-item .qr-code {
+  display: none;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -60px;
+  background: url("images/winxi.png") 0 0 no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  border-radius: 4px;
+}
+#footer .footer-item:hover .qr-code {
+  display: block;
 }
 #footer .footer-logo {
   display: inline-block;

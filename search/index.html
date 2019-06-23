@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Search | YFE|阅文前端团队</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Search">
+<meta property="og:url" content="http://blog.yueio.net/search/index.html">
+<meta property="og:site_name" content="YFE|阅文前端团队">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-23T05:18:19.082Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Search">
+  
+    <link rel="alternate" href="/atom.xml" title="YFE|阅文前端团队" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/css/images/logo.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="header-outer" class="outer">
+    <div id="header-inner" class="inner">
+      <h1 id="logo">
+          <a id="logo-img" href="/">YFE</a>
+          <a id="logo-txt" href="/">阅文前端团队</a>
+      </h1>
+      <a id="nav-search-btn" class="nav-icon" href="/search"></a>
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <!--<a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>-->
+        
+      </nav>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        
+          <section>
+    <div id="site_search">
+        <input type="text" id="local-search-input" results="0">
+        <span></span>
+    </div>
+    <div id="local-search-result">
+    </div>
+</section>
+
+<style>
+    #site_search {
+        position: relative;
+        width: 100%;
+        margin: 8% auto 0;
+    }
+
+    #local-search-input {
+        display: block;
+        height: 2.4em;
+        border-radius: 1.2em;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    #site_search span {
+        position: absolute;
+        left: 1em;
+        top: 0.75em;
+        opacity: 0.3;
+        text-align: center;
+        font-size: 1.5em;
+        width: 1em;
+        height: 1em;
+        line-height: 1;
+        cursor: pointer;
+        font-family: FontAwesome;
+    }
+    #site_search span:after {
+        content: "\f002";
+    }
+
+    #local-search-result {
+        margin-top: 32px;
+    }
+
+    #local-search-result li {
+        padding-bottom: 32px;
+    }
+
+    #local-search-result li .search-result-title {
+        text-decoration: none;
+        font-size: 1.6em;
+        font-weight: bold;
+        line-height: 1.1em;
+        color: #3385ff;
+    }
+
+    #local-search-result li .search-result-title:hover {
+        text-decoration: underline;
+    }
+
+    #local-search-result li .search-result {
+        margin: 16px 0;
+        max-height: 54px;
+        font-size: 13px;
+        line-height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical
+    }
+
+    #local-search-result .empty {
+        color: #999;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 3em auto;
+    }
+</style>
+
+        
+      </div>
+      <footer id="footer">
+    
+        
+<aside id="sidebar" class="outer">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/AMP/">AMP</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hybrid/">Hybrid</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/React-Native/">React Native</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/UI/">UI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/animation/">animation</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/性能优化/">性能优化</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/无障碍访问/">无障碍访问</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/05/22/20190522/">关于 AMP Story，你需要知道这些</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/14/20190514/">关于 AMP，Webnovel 都做了些什么？</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/19/20190419/">Google AMP WebPackage 在 Webnovel 的应用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/09/10/20180910/">面向体验的重构优化</a>
+          </li>
+        
+          <li>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+
+
+    
+    <div class="outer">
+        <div class="footer-container">
+
+            <div class="footer-grid">
+                <div class="footer-grid-col">
+                    <div class="footer-items">
+                    <a class="footer-item" href="https://github.com/yued-fe">GITHUB</a>
+                    <a class="footer-item" href="https://juejin.im/user/5acb247951882555712ca8ee">掘金</a>
+                    <a class="footer-item" href="https://www.zhihu.com/org/yue-wen-ji-tuan-qian-duan-tuan-dui/activities">知乎</a>
+                    <a class="footer-item" href="javascript:;">
+                        微信公众号
+                        <span class="qr-code"></span>
+                    </a>
+                    </div>
+                </div>
+                <div class="footer-grid-col">
+                    <p class="footer-disclaimer-text" style="padding-bottom: 10px">&copy; 2019 YFE All Rights Reserved</p>
+                    <!--<p class="footer-disclaimer-text" style="padding-bottom: 20px">Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+</nav>
+    
+
+<script src="/fancybox/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+  </body>
+</html>

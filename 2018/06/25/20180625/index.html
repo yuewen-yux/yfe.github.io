@@ -5,34 +5,34 @@
   
 
   
-  <title>起点海外版 Hybrid App－内嵌页优化实践 | YFE BLOG</title>
+  <title>起点海外版 Hybrid App－内嵌页优化实践 | YFE|阅文前端团队</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。 目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能">
 <meta name="keywords" content="用户体验,Hybrid,App,Webnovel">
 <meta property="og:type" content="article">
 <meta property="og:title" content="起点海外版 Hybrid App－内嵌页优化实践">
-<meta property="og:url" content="http://yoursite.com/2018/06/25/20180625/index.html">
-<meta property="og:site_name" content="YFE BLOG">
+<meta property="og:url" content="http://blog.yueio.net/2018/06/25/20180625/index.html">
+<meta property="og:site_name" content="YFE|阅文前端团队">
 <meta property="og:description" content="今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。 目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/1.png">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/2.png">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/3.png">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/4.png">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/5.png">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/6.png">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/1.gif">
-<meta property="og:image" content="http://yoursite.com/css/images/20180625/7.png">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/1.png">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/2.png">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/3.png">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/4.png">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/5.png">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/6.png">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/1.gif">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180625/7.png">
 <meta property="og:updated_time" content="2019-06-18T10:02:45.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="起点海外版 Hybrid App－内嵌页优化实践">
 <meta name="twitter:description" content="今年年初我司开启了起点品牌的海外之旅，名为「 Webnovel 」。 目前 PC / M站 / App 三端都在快速的迭代中。而其中起点海外版 App 是基于 Hybird 技术进行开发的。作为起点海外 Hybird App 中内嵌页的前端开发，从 1.0.0 版本的陌生，到最近发布的 2.0.0 版本的娴熟，海外版内嵌页的开发方式一直都在改进，力求最大程度的接近 Native App 的页面性能">
-<meta name="twitter:image" content="http://yoursite.com/css/images/20180625/1.png">
+<meta name="twitter:image" content="http://blog.yueio.net/css/images/20180625/1.png">
   
-    <link rel="alternate" href="/atom.xml" title="YFE BLOG" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="YFE|阅文前端团队" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/css/images/logo.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -46,14 +46,22 @@
       <header id="header">
   <div id="header-outer" class="outer">
     <div id="header-inner" class="inner">
-      <a id="logo" href="/">&lt;YFE /&gt;</a>
-      <h1 id="logo-txt">阅文前端团队</h1>
+      <h1 id="logo">
+          <a id="logo-img" href="/">YFE</a>
+          <a id="logo-txt" href="/">阅文前端团队</a>
+      </h1>
+      <a id="nav-search-btn" class="nav-icon" href="/search"></a>
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
           <a class="main-nav-link" href="/">主页</a>
         
           <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <!--<a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>-->
         
       </nav>
     </div>
@@ -81,7 +89,8 @@
   <time datetime="2018-06-24T16:00:00.000Z" itemprop="datePublished">2018-06-25</time>
 </a>
 
-      
+      <span style="padding-right: 0.5rem; color: #999;">Author: 刘文涛 </span>
+        
   <!--<div class="article-category">-->
     <a class="article-category-link" href="/categories/Hybrid/">Hybrid</a>
   <!--</div>-->
@@ -166,6 +175,11 @@
 
       
     </div>
+    
+    <div class="article-statement">
+      原创声明：本文为阅文前端团队 YFE 成员出品，请尊重原创，转载请联系公众号 ( id: yuewen_YFE ) 获取授权，并注明作者、出处和链接。
+    </div>
+    
     <footer class="article-footer">
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/App/">App</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hybrid/">Hybrid</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webnovel/">Webnovel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用户体验/">用户体验</a></li></ul>
@@ -186,9 +200,9 @@
     </a>
   
   
-    <a href="/2018/06/15/20180615/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/06/22/20180622/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <p class="article-nav-title">阅读体验优化之起点阅读页</p>
+      <p class="article-nav-title">是时候好好安利下 LuLu UI 框架了！</p>
     </a>
   
 </nav>
@@ -252,11 +266,11 @@
           </li>
         
           <li>
-            <a href="/2018/08/01/20180910/">面向体验的重构优化</a>
+            <a href="/2018/09/10/20180910/">面向体验的重构优化</a>
           </li>
         
           <li>
-            <a href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
           </li>
         
       </ul>
@@ -274,10 +288,13 @@
             <div class="footer-grid">
                 <div class="footer-grid-col">
                     <div class="footer-items">
-                    <a class="footer-item" href>GITHUB</a>
-                    <a class="footer-item" href>掘金</a>
-                    <a class="footer-item" href>知乎</a>
-                    <a class="footer-item" href>微信公众号</a>
+                    <a class="footer-item" href="https://github.com/yued-fe">GITHUB</a>
+                    <a class="footer-item" href="https://juejin.im/user/5acb247951882555712ca8ee">掘金</a>
+                    <a class="footer-item" href="https://www.zhihu.com/org/yue-wen-ji-tuan-qian-duan-tuan-dui/activities">知乎</a>
+                    <a class="footer-item" href="javascript:;">
+                        微信公众号
+                        <span class="qr-code"></span>
+                    </a>
                     </div>
                 </div>
                 <div class="footer-grid-col">

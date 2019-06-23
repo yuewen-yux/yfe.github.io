@@ -5,33 +5,33 @@
   
 
   
-  <title>阅读体验优化之起点阅读页 | YFE BLOG</title>
+  <title>阅读体验优化之起点阅读页 | YFE|阅文前端团队</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="阅读页作为小说阅读类网站访问量很高的页面，阅读体验上的优化是至关重要的。我有幸在起点项目中负责阅读页的前端开发，成就感满满。    起点中文网访问地址：https://www.qidian.com ，欢迎体验！ 在整个起点项目已经有很完善的性能优化体系的情况下，阅读页在改版之后，页面性能统计数据如下：">
-<meta name="keywords" content="scroll,函数截流,用户体验">
+<meta name="keywords" content="用户体验,scroll,函数截流">
 <meta property="og:type" content="article">
 <meta property="og:title" content="阅读体验优化之起点阅读页">
-<meta property="og:url" content="http://yoursite.com/2018/06/15/20180615/index.html">
-<meta property="og:site_name" content="YFE BLOG">
+<meta property="og:url" content="http://blog.yueio.net/2018/06/15/20180615/index.html">
+<meta property="og:site_name" content="YFE|阅文前端团队">
 <meta property="og:description" content="阅读页作为小说阅读类网站访问量很高的页面，阅读体验上的优化是至关重要的。我有幸在起点项目中负责阅读页的前端开发，成就感满满。    起点中文网访问地址：https://www.qidian.com ，欢迎体验！ 在整个起点项目已经有很完善的性能优化体系的情况下，阅读页在改版之后，页面性能统计数据如下：">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibvnLOLaqNfAj0ove7lsZnAlRibol903KFNyaeCvQg5H2NeEL0AjibF8xw/640?wx_fmt=png">
-<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpib2M6MbPsF3flSU1elGiaqvaRJG1nyNg6HeaDEYcgvuHEGGNjKGq4Ueew/640?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibgyJrMhmh0aFF6Q7InwQ6q3rsPZhBsDohbcONfMLsJPWTH8UM2wtk0Q/640?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_gif/ExsnuZZkwPMoDpPF1mCwKcxOgiaoIL1O1wTNbgqFZdHdcuxWh0tLxoicU84wGyndLM0aibXbkrDPY05kKBw3ibJfsQ/640?wx_fmt=gif">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibvdXzZqLDKdbFbEkso5lOB6PKv3IVV4Ec9JITfmibcKL4ZfwqmNqgOOA/640?wx_fmt=png">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_gif/ExsnuZZkwPMoDpPF1mCwKcxOgiaoIL1O1KoVgzwJ8grTNrhydevSf1ACXZqnu7RdJN7qacKJJA3Q4hM9EKBtjKw/640?wx_fmt=gif">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_gif/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpib4BTbDjRh6VSJhYaLOIQIgECwgsVJsicMmw2Q5TY1tjicOLLpb3icV57Xg/640?wx_fmt=gif">
-<meta property="og:updated_time" content="2019-06-18T06:45:35.315Z">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180615/1.jpg">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180615/2.jpg">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180615/3.jpg">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180615/4.gif">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180615/5.jpg">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180615/6.gif">
+<meta property="og:image" content="http://blog.yueio.net/css/images/20180615/7.gif">
+<meta property="og:updated_time" content="2019-06-23T07:00:05.668Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阅读体验优化之起点阅读页">
 <meta name="twitter:description" content="阅读页作为小说阅读类网站访问量很高的页面，阅读体验上的优化是至关重要的。我有幸在起点项目中负责阅读页的前端开发，成就感满满。    起点中文网访问地址：https://www.qidian.com ，欢迎体验！ 在整个起点项目已经有很完善的性能优化体系的情况下，阅读页在改版之后，页面性能统计数据如下：">
-<meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibvnLOLaqNfAj0ove7lsZnAlRibol903KFNyaeCvQg5H2NeEL0AjibF8xw/640?wx_fmt=png">
+<meta name="twitter:image" content="http://blog.yueio.net/css/images/20180615/1.jpg">
   
-    <link rel="alternate" href="/atom.xml" title="YFE BLOG" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="YFE|阅文前端团队" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link rel="icon" href="/css/images/logo.png">
   
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
@@ -45,14 +45,22 @@
       <header id="header">
   <div id="header-outer" class="outer">
     <div id="header-inner" class="inner">
-      <a id="logo" href="/">&lt;YFE /&gt;</a>
-      <h1 id="logo-txt">阅文前端团队</h1>
+      <h1 id="logo">
+          <a id="logo-img" href="/">YFE</a>
+          <a id="logo-txt" href="/">阅文前端团队</a>
+      </h1>
+      <a id="nav-search-btn" class="nav-icon" href="/search"></a>
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
           <a class="main-nav-link" href="/">主页</a>
         
           <a class="main-nav-link" href="/archives">归档</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <!--<a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>-->
         
       </nav>
     </div>
@@ -80,7 +88,8 @@
   <time datetime="2018-06-14T16:00:00.000Z" itemprop="datePublished">2018-06-15</time>
 </a>
 
-      
+      <span style="padding-right: 0.5rem; color: #999;">Author: 刘文涛 </span>
+        
   <!--<div class="article-category">-->
     <a class="article-category-link" href="/categories/javascript/">javascript</a>
   <!--</div>-->
@@ -91,11 +100,10 @@
       
         <p>阅读页作为小说阅读类网站访问量很高的页面，阅读体验上的优化是至关重要的。我有幸在起点项目中负责阅读页的前端开发，成就感满满。   </p>
 <p>起点中文网访问地址：<a href="https://www.qidian.com" target="_blank" rel="noopener">https://www.qidian.com</a> ，欢迎体验！</p>
-<p>在整个起点项目已经有很完善的性能优化体系的情况下，阅读页在改版之后，页面性能统计数据如下：</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibvnLOLaqNfAj0ove7lsZnAlRibol903KFNyaeCvQg5H2NeEL0AjibF8xw/640?wx_fmt=png" alt></p>
-<a id="more"></a>
+<p>在整个起点项目已经有很完善的性能优化体系的情况下，阅读页在改版之后，页面性能统计数据如下：<br><a id="more"></a></p>
+<p><img src="/css/images/20180615/1.jpg" alt></p>
 <p>▲ 上报系统统计数据</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpib2M6MbPsF3flSU1elGiaqvaRJG1nyNg6HeaDEYcgvuHEGGNjKGq4Ueew/640?wx_fmt=png" alt></p>
+<p><img src="/css/images/20180615/2.jpg" alt></p>
 <p>▲ 全国访问速度均值 10% 采样结果</p>
 <p>由上组统计数据我们可以看到，起点中文网阅读页平均 DOM Ready 的时间为 0.2s ，Onload 的时间为 0.9s ，加载最慢地区页面 Onload 时间也仅为 1.44s 。</p>
 <p>这已经充分体现了起点中文网阅读页的优异性能，本篇着重探讨在页面性能已经如此良好的情况下，如何进一步的优化起点中文的阅读体验。本次优化侧重在以下两点：<br>    一、章节加载逻辑优化；<br>    二、滚动加载优化－函数节流；</p>
@@ -106,18 +114,18 @@
 </ul>
 <h4 id="1-适当提前-Scroll-触发加载时机"><a href="#1-适当提前-Scroll-触发加载时机" class="headerlink" title="1. 适当提前 Scroll 触发加载时机"></a>1. 适当提前 Scroll 触发加载时机</h4><p><strong>什么是触发加载时机提前？</strong>即当你预知到加载即将被触发，就提前触发当前事件，这可以大大减少用户等待的时间。  </p>
 <p>起点中文阅读页提前触发事件的机制是，当页面剩余高度小于等于页面视窗的 1.5 倍时，就立即加载下一章节。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibgyJrMhmh0aFF6Q7InwQ6q3rsPZhBsDohbcONfMLsJPWTH8UM2wtk0Q/640?wx_fmt=png" alt>  </p>
+<p><img src="/css/images/20180615/3.jpg" alt></p>
 <p>可以看到实现原理其实很简单，就是达到触发点去拉取下一章节，实现代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用函数节流的形式监听scroll事件</span></span><br><span class="line">$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </span><br><span class="line">    <span class="comment">// 获取当前页面高度  </span></span><br><span class="line">    <span class="keyword">var</span> pageHeight = $(<span class="built_in">document</span>).height();  </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 获取滚动条距离页面顶部的距离</span></span><br><span class="line">    <span class="keyword">var</span> winSTop = $(<span class="built_in">window</span>).scrollTop();  </span><br><span class="line">     </span><br><span class="line">    <span class="comment">// 获取浏览器高度</span></span><br><span class="line">    <span class="keyword">var</span> winHeight = $(<span class="built_in">window</span>).height();  </span><br><span class="line">      </span><br><span class="line">    <span class="comment">// 当页面未显示高度页还剩1.5倍视窗高度时,加载  </span></span><br><span class="line">    <span class="keyword">var</span> cHeight =  <span class="number">2.5</span> * winHeight;  </span><br><span class="line">       </span><br><span class="line">    <span class="comment">//当剩下小于1。5屏未显示的时候,加载新的章节  </span></span><br><span class="line">    <span class="keyword">if</span>( pageHeight &lt;= ( winSTop + cHeight ) )&#123;    </span><br><span class="line">        <span class="comment">// ... do somethings</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 页面初始化的时候主动去触发一次scroll事件</span></span><br><span class="line">$(<span class="built_in">window</span>).trigger(<span class="string">'scroll'</span>);</span><br></pre></td></tr></table></figure>
 <p>当写完上述代码后，会发现页面加载下一章节变的快多了，但是在滚动很快的情况下或者数据接口返回较慢的时候，页面还是会显示 Loading 态，如下图所示：   </p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/ExsnuZZkwPMoDpPF1mCwKcxOgiaoIL1O1wTNbgqFZdHdcuxWh0tLxoicU84wGyndLM0aibXbkrDPY05kKBw3ibJfsQ/640?wx_fmt=gif" alt></p>
+<p><img src="/css/images/20180615/4.gif" alt></p>
 <p>Loading 会 Block 阅读进度，影响用户阅读心情。所以在这种情况下，我们引入第二个体验上的优化点。  </p>
 <h4 id="2-持续预加载后面章节数据"><a href="#2-持续预加载后面章节数据" class="headerlink" title="2. 持续预加载后面章节数据"></a>2. 持续预加载后面章节数据</h4><p><strong>什么是预加载？</strong> </p>
 <p>提前加载数据，当用户需要查看时可直接从本地缓存或者内存中读取。</p>
 <p><strong>为什么需要预加载？</strong> </p>
 <p>可以从缓存中读取数据，不通过网络传输，速度更加快，无延迟。</p>
 <p>利用用户阅读的空余时间，提前加载下面一章节的信息存入内存中，减少用户等待 Loading 的时间，从而达到进一步提升用户体验的目的。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpibvdXzZqLDKdbFbEkso5lOB6PKv3IVV4Ec9JITfmibcKL4ZfwqmNqgOOA/640?wx_fmt=png" alt></p>
+<p><img src="/css/images/20180615/5.jpg" alt></p>
 <p>▲ 预加载逻辑流程</p>
 <p>上图描述了我们利用内存存储下一章数据的流程。下面具体来看一下代码的逻辑：  </p>
 <p>1) 首先页面 Load 完之后立马加载一章节内容存储在内存中；</p>
@@ -125,7 +133,7 @@
 <p>2) Scroll 滚动触发逻辑 ，添加预加载章节逻辑，保证页面加载无断续状态。代码如下：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用函数节流的形式监听scroll事件  </span></span><br><span class="line">$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;   </span><br><span class="line"></span><br><span class="line"><span class="comment">//当正在加载章节时,不再加载下面章节   </span></span><br><span class="line"><span class="keyword">if</span> (that.chapterLoad) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   </span><br><span class="line"><span class="comment">// do something ...</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">// 当剩下小于1.5屏未显示的时候,加载新的章节  </span></span><br><span class="line"><span class="keyword">if</span> (pageHeight &lt;= (winSTop + cHeight)) &#123;  </span><br><span class="line">    <span class="comment">// 当内存中有章节存储 &amp;&amp; 储存的章节id === 下一张展现至页面上的章节id   </span></span><br><span class="line">    <span class="keyword">if</span> (chapterInfo.isHas &amp;&amp; chapterInfo.id == nextChapterId) &#123;    </span><br><span class="line">    <span class="comment">// 把内存中的章节append 至页面中，并清除chapterInfo参数中的数据  </span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// capterLoad 置为true,禁止发送请求  </span></span><br><span class="line">    that.chapterLoad = <span class="literal">true</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 发送ajax请求 加载数据 append 至页面  </span></span><br><span class="line">    &#125;    </span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (!chapterInfo.isHas &amp;&amp; !that.chapterLoad) &#123; </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 当内存中没有章节信息 &amp;&amp; 没有章节正在加载时 进行预先加载</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//重置为true,禁止发送请求   </span></span><br><span class="line">    that.chapterLoad = <span class="literal">true</span>;</span><br><span class="line">    chapterInfo.isHas = <span class="literal">true</span>; </span><br><span class="line">    <span class="comment">// ajax拉取章节信息至内存 ，并设置 that.chapterLoad = false   </span></span><br><span class="line">    <span class="comment">// 在数据返回存入内存后，回调中主动触发一次 window.scroll 事件，防止在ajax请求时还未返回数据时， 页面已经滚动至底部不再触发scroll 事件，页面出现加载停滞情况    </span></span><br><span class="line">    &#125;   </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>从上述代码可以看到预加载和直接 Append 数据至页面中的逻辑是互斥的，既保证页面逻辑清晰，也优化了页面阅读体验，达到我们预期的效果。现在我们来看下页面滚动的效果：  </p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/ExsnuZZkwPMoDpPF1mCwKcxOgiaoIL1O1KoVgzwJ8grTNrhydevSf1ACXZqnu7RdJN7qacKJJA3Q4hM9EKBtjKw/640?wx_fmt=gif" alt> </p>
+<p><img src="/css/images/20180615/6.gif" alt></p>
 <p>页面加载下一章节的时候几乎没有 Loading 态显示，赞！  </p>
 <h3 id="二、滚动加载优化－函数节流"><a href="#二、滚动加载优化－函数节流" class="headerlink" title="二、滚动加载优化－函数节流"></a>二、滚动加载优化－函数节流</h3><p>做了上述优化之后，页面滚动加载已经很完美了，这个时候我们可以去思考一下代码层面上的优化。在前端领域中<strong>滚动加载</strong>是一个十分常见的加载机制。监听 window.scroll 事件，判断当前是否到达触发加载的时机，加载后面一段内容。常见的监听事件代码为：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// ... do somethings</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -143,13 +151,18 @@ $(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>,
 }, <span class="number">200</span> ,<span class="number">300</span>));
 </code></pre>
 <p>如下所示，左边是普通 Scroll 事件触发的方式，右边是使用了节流函数触发的方式。使用节流函数的方式明显减少了事件触发的频率，并且在停止滚动的时候也会触发一次 Scroll 事件，防止错过一些特殊的情况，未能执行页面下拉加载事件。  </p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_gif/ExsnuZZkwPORDSlg2vY6ku0FlyEMbJpib4BTbDjRh6VSJhYaLOIQIgECwgsVJsicMmw2Q5TY1tjicOLLpb3icV57Xg/640?wx_fmt=gif" alt>  </p>
+<p><img src="/css/images/20180615/7.gif" alt></p>
 <p>最终我们在没有影响页面滚动加载体验的情况下，节省了浏览器的性能开销，完美。</p>
 <h3 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h3><p>第一次做阅读相关的项目，并负责如此重要的一个页面，我融入了自己的想法，优化阅读体验，最终达到了我要的效果，我很满意。  </p>
 <p>一个细节的优化是可以决定产品的好坏的，良好的用户体验，会吸引跟多的用户，获得更多的称赞。针对阅读体验上的优化，我们其实能做的还有很多，希望之后可以再进一步的优化。  </p>
 
       
     </div>
+    
+    <div class="article-statement">
+      原创声明：本文为阅文前端团队 YFE 成员出品，请尊重原创，转载请联系公众号 ( id: yuewen_YFE ) 获取授权，并注明作者、出处和链接。
+    </div>
+    
     <footer class="article-footer">
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/scroll/">scroll</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数截流/">函数截流</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/用户体验/">用户体验</a></li></ul>
@@ -160,11 +173,11 @@ $(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>,
     
 <nav id="article-nav">
   
-    <a href="/2018/06/25/20180625/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/06/22/20180622/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <p class="article-nav-title">
         
-          起点海外版 Hybrid App－内嵌页优化实践
+          是时候好好安利下 LuLu UI 框架了！
         
       </p>
     </a>
@@ -236,11 +249,11 @@ $(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>,
           </li>
         
           <li>
-            <a href="/2018/08/01/20180910/">面向体验的重构优化</a>
+            <a href="/2018/09/10/20180910/">面向体验的重构优化</a>
           </li>
         
           <li>
-            <a href="/2018/08/01/20180622/">是时候好好安利下 LuLu UI 框架了！</a>
+            <a href="/2018/08/01/20180801/">React Native 在元气阅读的实践</a>
           </li>
         
       </ul>
@@ -258,10 +271,13 @@ $(<span class="built_in">window</span>).on(<span class="string">'scroll'</span>,
             <div class="footer-grid">
                 <div class="footer-grid-col">
                     <div class="footer-items">
-                    <a class="footer-item" href>GITHUB</a>
-                    <a class="footer-item" href>掘金</a>
-                    <a class="footer-item" href>知乎</a>
-                    <a class="footer-item" href>微信公众号</a>
+                    <a class="footer-item" href="https://github.com/yued-fe">GITHUB</a>
+                    <a class="footer-item" href="https://juejin.im/user/5acb247951882555712ca8ee">掘金</a>
+                    <a class="footer-item" href="https://www.zhihu.com/org/yue-wen-ji-tuan-qian-duan-tuan-dui/activities">知乎</a>
+                    <a class="footer-item" href="javascript:;">
+                        微信公众号
+                        <span class="qr-code"></span>
+                    </a>
                     </div>
                 </div>
                 <div class="footer-grid-col">
