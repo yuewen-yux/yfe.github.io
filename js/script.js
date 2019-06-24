@@ -206,7 +206,9 @@
       }
     })
   };
-  searchFunc('/search.xml', 'local-search-input', 'local-search-result');
 
+  if (document.getElementById('local-search-input')) {
+    searchFunc('/search.xml', 'local-search-input', 'local-search-result');
+  }
 
 })(jQuery);
