@@ -129,10 +129,10 @@
         <category>无障碍访问</category>
       </categories>
       <tags>
+        <tag>Mobile</tag>
         <tag>VoiceOver</tag>
         <tag>无障碍访问</tag>
         <tag>html</tag>
-        <tag>Mobile</tag>
       </tags>
   </entry>
   <entry>
@@ -143,9 +143,9 @@
         <category>animation</category>
       </categories>
       <tags>
-        <tag>Mobile</tag>
         <tag>animation</tag>
         <tag>requestAnimationFrame</tag>
+        <tag>Mobile</tag>
       </tags>
   </entry>
 </search>
