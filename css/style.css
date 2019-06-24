@@ -338,16 +338,25 @@ body {
   overflow: hidden;
 }
 #banner {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
-  height: 100%;
-  background: center #000;
+  height: 360px;
+  overflow: hidden;
+  background: #3385fe;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  z-index: -1;
+  text-align: center;
+  line-height: 360px;
+  color: #fff;
+  font-size: 300px;
+}
+@media screen and (max-width: 479px) {
+  #banner {
+    height: 240px;
+    line-height: 240px;
+    font-size: 100px;
+  }
 }
 #header-logo {
   float: right;

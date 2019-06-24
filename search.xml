@@ -48,8 +48,8 @@
       </categories>
       <tags>
         <tag>用户体验</tag>
-        <tag>性能优化</tag>
         <tag>Webnovel</tag>
+        <tag>性能优化</tag>
       </tags>
   </entry>
   <entry>
@@ -74,9 +74,9 @@
       </categories>
       <tags>
         <tag>用户体验</tag>
-        <tag>Webnovel</tag>
         <tag>Hybrid</tag>
         <tag>App</tag>
+        <tag>Webnovel</tag>
       </tags>
   </entry>
   <entry>
@@ -129,10 +129,10 @@
         <category>无障碍访问</category>
       </categories>
       <tags>
-        <tag>Mobile</tag>
         <tag>VoiceOver</tag>
         <tag>无障碍访问</tag>
         <tag>html</tag>
+        <tag>Mobile</tag>
       </tags>
   </entry>
   <entry>
@@ -143,9 +143,9 @@
         <category>animation</category>
       </categories>
       <tags>
+        <tag>Mobile</tag>
         <tag>animation</tag>
         <tag>requestAnimationFrame</tag>
-        <tag>Mobile</tag>
       </tags>
   </entry>
 </search>
