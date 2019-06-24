@@ -355,7 +355,7 @@ body {
   height: 42px;
   margin: 9px 0;
   font-size: 0;
-  background: url("images/logo.png") center center no-repeat;
+  background: url("images/logo.jpg") center center no-repeat;
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   background-size: 100% auto;
@@ -398,7 +398,7 @@ body {
   height: 42px;
   margin: 9px 0;
   font-size: 0;
-  background: url("images/logo.png") center center no-repeat;
+  background: url("images/logo.jpg") center center no-repeat;
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   background-size: 100% auto;
@@ -1278,7 +1278,7 @@ a.article-title:hover {
   bottom: 20px;
   left: 50%;
   margin-left: -60px;
-  background: url("images/winxi.png") 0 0 no-repeat;
+  background: url("images/weixin.jpg") 0 0 no-repeat;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;
