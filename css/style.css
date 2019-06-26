@@ -133,7 +133,7 @@ body {
 }
 .outer {
   max-width: 920px;
-  min-height: calc(100% - 407px);
+  min-height: calc(100% - 392px);
   margin: 0 auto;
   padding: 0 20px;
 }

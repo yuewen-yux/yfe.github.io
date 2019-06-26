@@ -5,8 +5,8 @@
     $('#main-nav').find('.main-nav-link').eq(0).addClass('cur')
   } else if (urlPath === '/archives/') {
     $('#main-nav').find('.main-nav-link').eq(1).addClass('cur')
-  } else if (urlPath === '/tags/') {
-    $('#main-nav').find('.main-nav-link').eq(2).addClass('cur')
+  } else if (urlPath === '/join/') {
+    $('#main-nav').find('.main-nav-link').eq(3).addClass('cur')
   }
 
   // Share
@@ -108,8 +108,8 @@
       $('#mobile-nav').find('.mobile-nav-link').eq(0).addClass('cur')
     } else if (urlPath === '/archives/') {
       $('#mobile-nav').find('.mobile-nav-link').eq(1).addClass('cur')
-    } else if (urlPath === '/tags/') {
-      $('#mobile-nav').find('.mobile-nav-link').eq(2).addClass('cur')
+    } else if (urlPath === '/join/') {
+      $('#mobile-nav').find('.mobile-nav-link').eq(3).addClass('cur')
     }
     stopMobileNavAnim();
   });
