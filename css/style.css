@@ -1235,6 +1235,20 @@ a.article-title:hover {
 #page-nav .space {
   color: #3385ff;
 }
+.gt-container .gt-link-counts,
+.gt-container .gt-link-project {
+  pointer-events: none !important;
+}
+.gt-container .gt-comment-content:hover {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.gt-container .gt-comment-content {
+  background: #fff !important;
+}
+.gt-container .gt-comments {
+  padding-bottom: 36px;
+}
 #footer {
   background: #363d47;
   padding: 36px 0 0;
