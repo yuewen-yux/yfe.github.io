@@ -149,11 +149,11 @@
       <category term="React Native" scheme="http://blog.yueio.net/categories/React-Native/"/>
     
     
+      <category term="React Native" scheme="http://blog.yueio.net/tags/React-Native/"/>
+    
       <category term="Hybrid" scheme="http://blog.yueio.net/tags/Hybrid/"/>
     
       <category term="App" scheme="http://blog.yueio.net/tags/App/"/>
-    
-      <category term="React Native" scheme="http://blog.yueio.net/tags/React-Native/"/>
     
   </entry>
   
@@ -302,13 +302,13 @@
       <category term="无障碍访问" scheme="http://blog.yueio.net/categories/%E6%97%A0%E9%9A%9C%E7%A2%8D%E8%AE%BF%E9%97%AE/"/>
     
     
+      <category term="Mobile" scheme="http://blog.yueio.net/tags/Mobile/"/>
+    
       <category term="VoiceOver" scheme="http://blog.yueio.net/tags/VoiceOver/"/>
     
       <category term="无障碍访问" scheme="http://blog.yueio.net/tags/%E6%97%A0%E9%9A%9C%E7%A2%8D%E8%AE%BF%E9%97%AE/"/>
     
       <category term="html" scheme="http://blog.yueio.net/tags/html/"/>
-    
-      <category term="Mobile" scheme="http://blog.yueio.net/tags/Mobile/"/>
     
   </entry>
   
@@ -335,9 +335,9 @@
     
       <category term="animation" scheme="http://blog.yueio.net/tags/animation/"/>
     
-      <category term="Mobile" scheme="http://blog.yueio.net/tags/Mobile/"/>
-    
       <category term="requestAnimationFrame" scheme="http://blog.yueio.net/tags/requestAnimationFrame/"/>
+    
+      <category term="Mobile" scheme="http://blog.yueio.net/tags/Mobile/"/>
     
   </entry>
   

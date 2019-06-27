@@ -60,9 +60,9 @@
         <category>React Native</category>
       </categories>
       <tags>
+        <tag>React Native</tag>
         <tag>Hybrid</tag>
         <tag>App</tag>
-        <tag>React Native</tag>
       </tags>
   </entry>
   <entry>
@@ -129,10 +129,10 @@
         <category>无障碍访问</category>
       </categories>
       <tags>
+        <tag>Mobile</tag>
         <tag>VoiceOver</tag>
         <tag>无障碍访问</tag>
         <tag>html</tag>
-        <tag>Mobile</tag>
       </tags>
   </entry>
   <entry>
@@ -144,8 +144,8 @@
       </categories>
       <tags>
         <tag>animation</tag>
-        <tag>Mobile</tag>
         <tag>requestAnimationFrame</tag>
+        <tag>Mobile</tag>
       </tags>
   </entry>
 </search>
