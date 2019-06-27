@@ -355,18 +355,6 @@ body {
     font-size: 120px;
   }
 }
-#header-logo {
-  float: right;
-  width: 42px;
-  height: 42px;
-  margin: 9px 0;
-  font-size: 0;
-  background: url("images/logo.jpg") center center no-repeat;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  background-size: 100% auto;
-  border-radius: 50%;
-}
 #header-title {
   text-align: center;
   height: 40px;
@@ -400,19 +388,25 @@ body {
 }
 #logo-img {
   float: left;
-  width: 42px;
+  width: 235px;
   height: 42px;
   margin: 9px 0;
   font-size: 0;
-  background: url("images/logo.jpg") center center no-repeat;
-  -webkit-background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  background-size: 100% auto;
-  border-radius: 50%;
+  background: url("images/logo_pc.png") center left no-repeat;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
 }
 @media screen and (max-width: 479px) {
   #logo-img {
     float: right;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: url("images/logo.jpg") center center no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    background-size: 100% auto;
   }
 }
 #logo-txt {
