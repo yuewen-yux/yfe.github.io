@@ -388,9 +388,9 @@ body {
 }
 #logo-img {
   float: left;
-  width: 235px;
-  height: 42px;
-  margin: 9px 0;
+  width: 149px;
+  height: 28px;
+  margin: 16px 0;
   font-size: 0;
   background: url("images/logo_pc.png") center left no-repeat;
   -webkit-background-size: auto 100%;
