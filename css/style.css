@@ -341,18 +341,21 @@ body {
   position: relative;
   width: 100%;
   overflow: hidden;
-  background: #3385fe;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  background: #4986f6 url("https://imgservices-1252317822.image.myqcloud.com/image/20190627/5f79c234c9b3.png") center center no-repeat;
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
   text-align: center;
   line-height: 1.5;
   color: #fff;
-  font-size: 180px;
+  height: 270px;
 }
 @media screen and (max-width: 479px) {
   #banner {
-    font-size: 120px;
+    height: 180px;
+    -webkit-background-size: auto 70%;
+    -moz-background-size: auto 70%;
+    background-size: auto 70%;
   }
 }
 #header-title {
