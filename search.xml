@@ -48,8 +48,8 @@
       </categories>
       <tags>
         <tag>用户体验</tag>
-        <tag>性能优化</tag>
         <tag>Webnovel</tag>
+        <tag>性能优化</tag>
       </tags>
   </entry>
   <entry>
@@ -60,9 +60,9 @@
         <category>React Native</category>
       </categories>
       <tags>
-        <tag>React Native</tag>
         <tag>Hybrid</tag>
         <tag>App</tag>
+        <tag>React Native</tag>
       </tags>
   </entry>
   <entry>
@@ -87,12 +87,12 @@
         <category>UI</category>
       </categories>
       <tags>
+        <tag>用户体验</tag>
         <tag>LuLu</tag>
         <tag>UI</tag>
         <tag>屏幕阅读器</tag>
         <tag>无障碍访问</tag>
         <tag>框架</tag>
-        <tag>用户体验</tag>
         <tag>键盘</tag>
       </tags>
   </entry>
@@ -104,9 +104,9 @@
         <category>javascript</category>
       </categories>
       <tags>
-        <tag>用户体验</tag>
         <tag>scroll</tag>
         <tag>函数截流</tag>
+        <tag>用户体验</tag>
       </tags>
   </entry>
   <entry>
