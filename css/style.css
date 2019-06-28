@@ -206,7 +206,6 @@ body {
 .article-category-link {
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
   color: #999;
   margin-bottom: 1em;
   margin-left: 5px;
@@ -592,7 +591,7 @@ body {
 .article-date {
   margin-left: 0;
   margin-bottom: 0;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
   line-height: 1.4em;
 }
 .article-category {
@@ -606,7 +605,7 @@ body {
   content: "\2022";
 }
 .article-category-link {
-  margin-right: 0.5em;
+  margin-right: 0.8em;
   margin-bottom: 0;
   margin-left: 0;
   color: #3385ff;
