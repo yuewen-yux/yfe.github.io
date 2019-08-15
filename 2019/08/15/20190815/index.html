@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://imgservices-1252317822.image.myqcloud.com/file/20190815/6fc4edd621e9.gif">
 <meta property="og:image" content="https://imgservices-1252317822.image.myqcloud.com/file/20190815/0b5bac7a9960.gif">
-<meta property="og:updated_time" content="2019-08-15T05:50:52.996Z">
+<meta property="og:updated_time" content="2019-08-15T06:01:01.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="非常规 - VUE 实现特定场景的主题切换">
 <meta name="twitter:description" content="实现页面皮肤切换，常见的方案有几种：替换 css 链接、替换 className、改变 css 原生变量值、使用 less.modifyVars、props 参数下发等；不同的业务场景，我们一般会选择不同的方法来实现目标。最近在公司运营活动平台上的主题功能的实现 ，我们尝试了一种新的解决方案，实现了页面主题的切换，目标是为了提高项目的可维护性、可扩展性，以及降低接入复杂度。">
@@ -131,8 +131,9 @@
 <ol>
 <li>对组件代码几乎无侵入性，组件只需要修改样式相关参数带上特殊标示既可，规则相对简单；</li>
 <li>参数无需一层层下发，易于维护；</li>
-<li>主题与主线功能相对独立，可以轻易移除主题功能，项目也可以正常运行；<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>主题的实现，不管是常见的方式，还是上述项目中的主题的实现方式，我们往往需要了解业务特性，去寻找最合适的解决方案。不同项目，有不同的实现方式，但目标都是为了提高项目的可维护性、可扩展性，以及降低接入复杂度。</li>
+<li>主题与主线功能相对独立，可以轻易移除主题功能，项目也可以正常运行；</li>
 </ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>主题的实现，不管是常见的方式，还是上述项目中的主题的实现方式，我们往往需要了解业务特性，去寻找最合适的解决方案。不同项目，有不同的实现方式，但目标都是为了提高项目的可维护性、可扩展性，以及降低接入复杂度。</p>
 <p>项目目前的实现方案，尚不失为一个好的解决方案，或者可以作为一种新的思路，供大家参考。</p>
 
       
