@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[非常规 - VUE 实现特定场景的主题切换]]></title>
+    <url>%2F2019%2F08%2F15%2F20190815%2F</url>
+    <content type="text"><![CDATA[实现页面皮肤切换，常见的方案有几种：替换 css 链接、替换 className、改变 css 原生变量值、使用 less.modifyVars、props 参数下发等；不同的业务场景，我们一般会选择不同的方法来实现目标。最近在公司运营活动平台上的主题功能的实现 ，我们尝试了一种新的解决方案，实现了页面主题的切换，目标是为了提高项目的可维护性、可扩展性，以及降低接入复杂度。 “主题”需求在了解主题功能之前，我们先来解下业务场景：在运营活动后台中，编辑活动配置页面，拖拽选择所需对应组件，并设置组件相应配置项，点击保存，既完成活动页面发布活动，前台就能访问对应生成活动。编辑页面如下图： 在如上前提，我们的需求就是：在运营后台配置页面中，实现全局切换主题功能，具体需求如下： 在配置页面，初始化页面时，实现主题一键切换所有组件的样式； 页面中的组件的配置，可配置对应组件样式，覆盖主题样式； 再次点击设置主题，可以覆盖已经设置样式的组件样式； 实现效果如下图所示： 那在了解完需求之后，对于 VUE 项目，要实现主题功能，一般想到的实现方式就是 theme 参数通过 prop 下发来实现。那我们就先来聊下常规实现方式：prop 下发实现方式。 常规实现方式定义主题首先我定义 theme.js 为主题相关参数，如下：12345678910111213141516const DEFAULT_THEME = &#123; primary: &apos;#2F54EB&apos;, subPrimary: &apos;#D6E4FF&apos;, error: &apos;#F5222D&apos;, success: &apos;#52C41A&apos;, warning: &apos;#FAAD14&apos;, background: &apos;#FFFFFF&apos;, text: &apos;#222222&apos;&#125;export default &#123; DEFAULT: DEFAULT_THEME, FIRST: &#123; ...DEFAULT_THEME, background: &apos;#2590ff&apos; &#125;&#125; 主模块下发 theme 给予组件接着需要在主模块中，下发 theme 参数，和组件相关配置参数 给到组件，点击按钮，切换主题：123456789101112131415161718192021222324252627&lt;template&gt; &lt;div&gt; &lt;div @click=&quot;changeTheme&quot;&gt;换主题&lt;/div&gt; &lt;Component v-for=&quot;(item, index) in componentList&quot; :theme=&quot;theme&quot; :key=&quot;index&quot; ...item.config // 业务相关参数都在config中 /&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt;import theme from &apos;theme.js&apos;export default &#123; name: &quot;themeChange&quot;, data() &#123; return &#123; theme: theme[&apos;DEFAULT&apos;] &#125; &#125;, methods: &#123; changeTheme() &#123; this.theme = theme[&apos;FIRST&apos;] &#125; &#125;&#125;&lt;/script&gt; 组件监听 theme 改变组件样式组件中，获取上级组件传递下来的配置参数及主题参数，并监听 theme 的变化，当发生改变，重置样式参数值为主题样式：12345678910111213141516171819202122232425262728293031323334353637&lt;template&gt; &lt;div&gt; &lt;div :style=&quot;&#123; background: config.bgColor &#125;&quot;&gt;主题&lt;/div&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt;import theme from &apos;theme.js&apos;const initTheme = theme[&apos;DEFAULT&apos;]export default &#123; name: &quot;themeSwitch&quot;, props: &#123; theme: &#123; type: Object, default: () =&gt; (&#123;&#125;) &#125;, bgColor: &#123; type: String, default: initTheme.background &#125;, ... &#125;, data() &#123; return &#123; config: &#123; bgColor: this.bgColor, ... &#125; &#125; &#125;, watch: &#123; &apos;theme&apos; (to, from) &#123; this.config.bgColor = this.theme.bgColor &#125; &#125;&#125; &lt;/script&gt; 看到这里大家会说，为什么需要在** **watch 中监听主题的变化，而不是在组件初始化的时候参数就直接指向主题对应的参数呢？ 因为主题需求里面所说的，在组件里面也是可以改变组件相关样式的，上述 demo 代码中的 bgColor 参数，既可以通过点击切换主题可以设置 ，也可以是组件自己设置的，有多个来源（这里不对组件的配置实现做详细展开）；要做到设置主题的时候，组件的样式会设置相应的主题色，就需要在 watch 中进行监听 theme 参数的变化，发生变化，重置相应参数，但是这种方式在每个组件都需要有相同代码片段，监听参数，达到我们的效果，代码非常冗余。 综上，我们对代码进一步优化，把监听 theme 参数的方法统一封装，这里会有另一个问题：每个组件对应颜色的参数是不可定的，且参数层级也是不可定的，几乎每个组件需要维护一整个变量数组。这样定义的规则会相对复杂，维护成本过高，且极易弄错。 很显然这样的实现方式并不是一种很好的方法，那要如何实现？ “非常规”实现方式在尝试上面的方式之后，我在想我的思路是否正确，是不是切入角度有点问题，那我们换一个角度去切入。 配置参数入手当我**们发现页面整个 this.componentList 参数 ( 里面存储了所有组件的相关配置 ) 我是可以拿到的时候，我们**是不是可以从数据入手？ok，说到这里，那其实思路就出现了, this.componentList 里面的参数规则：1234567891011[ &#123; componentName: &apos;xx&apos;, config: &#123; color: &apos;xxx&apos;, background: &apos;xxx&apos;, ... &#125; &#125;, ...] 我们会发现，在开发组件的时候就已经是把颜色相关参数提取到配置里面了，那也就是说我修改配置参数的值，其实就可以达到设置主题的效果？因为所有组件的配置参数都是由this.componentList 参数下发的。 参数给予特殊标识定义 theme.js 相关参数，和上面一致，故不在多说，主要做的就是，在组件中，我们把相关参数进行修改，改为有特殊标示的参数， 如下：1234567891011121314151617181920&lt;template&gt; &lt;div&gt; &lt;div :style=&quot;&#123; background: this[&apos;bgColor.t.background&apos;]&#125;&quot;&gt;主题&lt;/div&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt;import theme from &apos;theme.js&apos;const initTheme = theme[&apos;DEFAULT&apos;]export default &#123; name: &quot;themeSwitch&quot;, props: &#123; &apos;bgColor.t.background&apos;: &#123; // .t.: 为特殊标识 ；background: 为主题里面对应的字段名 background: &apos;#FFFFFF&apos; type: String, default: initTheme.background &#125; &#125;&#125; &lt;/script&gt; 遍历参数替换特殊标识参数值当点击主题切换的时候，会去遍历 this.componentList 参数，修改有特殊标示的参数为新主题对应的参数，代码如下：123456789101112131415161718192021222324252627282930313233/** 根据主题重制componentsConfig* @method changeTheme* */changeTheme () &#123; this.theme = theme[&apos;FIRST&apos;] this.componentList.forEach(component =&gt; &#123; this._setThemeChangeConfig(component.config || &#123;&#125;) &#125;)&#125;,_setThemeChangeConfig (obj) &#123; Object.keys(obj).map(name =&gt; &#123; if (Object.prototype.toString.call(obj[name]) === &apos;[object Object]&apos;) &#123; this._setThemeChangeConfig(obj[name]) &#125; else &#123; const themeColorArr = name.match(/\.t\.(\S*)/) if (themeColorArr &amp;&amp; this.isThemeColorName(themeColorArr[1])) &#123; this.$set(obj, name, this.theme[themeColorArr[1]]) &#125; &#125; &#125;)&#125;,/** 判断颜色name是否在主题里面* @method isThemeColorName* */isThemeColorName (name) &#123; let has = false Object.keys(this.theme).forEach((paramsName) =&gt; &#123; if (paramsName === name) has = true &#125;) return has&#125; 最终实现了最终的主题切换的效果。 该方式带来的优势： 对组件代码几乎无侵入性，组件只需要修改样式相关参数带上特殊标示既可，规则相对简单； 参数无需一层层下发，易于维护； 主题与主线功能相对独立，可以轻易移除主题功能，项目也可以正常运行；总结主题的实现，不管是常见的方式，还是上述项目中的主题的实现方式，我们往往需要了解业务特性，去寻找最合适的解决方案。不同项目，有不同的实现方式，但目标都是为了提高项目的可维护性、可扩展性，以及降低接入复杂度。 项目目前的实现方案，尚不失为一个好的解决方案，或者可以作为一种新的思路，供大家参考。]]></content>
+      <categories>
+        <category>VUE</category>
+      </categories>
+      <tags>
+        <tag>VUE</tag>
+        <tag>主题</tag>
+        <tag>运营活动</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于 AMP Story，你需要知道这些]]></title>
     <url>%2F2019%2F05%2F22%2F20190522%2F</url>
     <content type="text"><![CDATA[在我们的 AMP 改版 过程中，我们发现了一些新的 AMP 组件，并针对部分组件做了一些尝试。其中就包括 AMP Story。AMP Story 是 AMP 的一种新的网页展现形式。 成果展示在介绍 AMP Story 之前，大家可以先看一下，我们基于 AMP Story 技术做的一个 Demo 页面。下面是我们做的一个关于 Tour Of Wenbovel 主题的一个 AMP Story 页面。对用户来说，与传统的单纯文字和图片不一样，它提供了一种沉浸式的 Web 体验。 「Webnovel 的 AMP Story 页面，Tour of Webnovel」 AMP StoryAMP Story 是 AMP 在推的 4 大主类之一，另外三个分别是 AMP Website、AMP Ads、AMP Email。之前我们都是着重于 AMP Website 这一方面的工作。AMP Story 在展现形式上类似于我们熟悉的 ppt，同样是文字和图片搭配，加以丰富动效和页面切换。但除此之外，AMP 团队为我们实现了更多组件细节。比如页面切换时的贴心提示，告诉用户左右切换的点击区域；比如 pc 端到移动端的样式适配；比如社交网络分享功能，我们不需要再自己集成各个社交网络的分享；他们甚至为 AMP Story 单独做了一套沉浸式的广告组件。 为什么要做 AMP StoryAMP Conf 2019 上的一个分享「Boring Content - Excited Users」令人感触颇深：Boost 是一个让用户比较、选择数百种不同运营商流量包的产品。他们的用户主要是非洲、印尼、东南亚的年轻人，对新技术有很强的适应能力，喜欢新颖的东西。他们原来使用博文的形式来介绍、比较各种流量包，但效果并不好，因为内容无法引起用户的兴趣。于是他们改用了 AMP Story，这种动感、图文并备的形式，让他们的内容阅读完成率提高到了 87%。 「boost 的两种推文形式对比，图片摘自演讲视频」 在信息爆炸的时代，人们越来越难以集中注意力，面对一整屏密密麻麻的文字时的通常状态是：一目十行地随意浏览，寻找关键信息，机械地滑动屏幕并假装自己看完了。这也是为什么总是会有“太长不看”的吐槽，也是为什么信息碎片化的社交网络、抖音这样的沉浸式短视频应用会轻而易举地攫取用户的芳心甚至让用户上瘾的原因。上面提到的 Boost 案例也印证了这一点。东南亚、非洲，这些地区拥有大量的远高于桌面的移动用户，他们喜爱在 Youtube 上看视频，喜欢刷 Facebook，Boost 的成功之处正是顺应用户心理作出改变。AMP Story 作为一种新的网页信息展现方式，跳出了传统的文字为主的垂直的文档流页面，让更加生动的图片、短视频等进行自我表达。而我们也可以借机思考——现有的一些页面是否能吸引用户的注意力，用户是否能有效地消化我们传达的信息，将来我们的用户会喜欢如何获取信息等等，并快速作出一些改变、尝试。 开发的基本流程开发 AMP Story 不是一件很困难的事情，官方提供了详尽的文档和丰富的案例。但在开发之前，我们还要思考内容迁移。如果你的内容是一个榜单或一个列表，那就十分简单。但如果不是，你就要考虑如何把你的内容井井有条地分解，然后大量地删减文字，只留下最核心的思想，搭配相应的图片、视频资源，从而更加直观而有力的表达，或营造氛围。 「Understanding the parts of an AMP story by AMP」 上图展示了 AMP Story 的三个层级：Pages、Layers、Elements。按这个结构搭好页面框、指定 layer 的布局（Fill、Vertical、Horizontal、Thirds）、往里塞一些需要的组件（文字、图片、视频等等）并给组件加上动画，就可以完成一个最简单的 Page。以我们的第二个 Page ，也就是除 cover 外正文的第一个 Page 为例，它的结构如下：123456789101112131415&lt;amp-story-page id=&quot;page2&quot; class=&quot;page&quot; auto-advance-after=&quot;video2&quot;&gt; &lt;amp-story-grid-layer template=&quot;fill&quot;&gt; &lt;amp-video id=&quot;video2&quot; layout=&quot;fill&quot; src=&quot;//www.yueimg.com/overseam/img/amp/story/webnovel_02.mp4&quot; poster=&quot;//www.yueimg.com/overseam/img/amp/story/poster_02.jpg&quot; autoplay&gt;&lt;/amp-video&gt; &lt;/amp-story-grid-layer&gt; &lt;amp-story-grid-layer template=&quot;vertical&quot;&gt; &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt; &lt;div animate-in=&quot;fly-in-right&quot; animate-in-duration=&quot;0.2s&quot; animate-in-delay=&quot;4s&quot;&gt; &lt;div class=&quot;pin-bottom&quot;&gt; &lt;h2&gt;Cultivation Chat Group&lt;/h2&gt; &lt;p&gt;One day, Song Shuhang was suddenly added to a chat group with many seniors that suffered from chuuni disease...&lt;/p&gt; &lt;/div&gt; &lt;/div&gt;&lt;/amp-story-grid-layer&gt;&lt;/amp-story-page&gt; 这个 page 的效果如下： 如此炮制出封面和其他 page，再加上书末页（我们会在后文详细说明），你的整个 story 就基本完成了。 「封面和书末」 开发 tips 集成 和 由于 AMP Story 整套的层级十分严格——比如说 body 下只能有一个 子元素。因此我们很难像正常的代码那样在逻辑合理的位置插入必要的 以及 组件。我们的解决方案是这样的：将 放在 下，它应该是 除了 外唯一能容纳的组件； 则无法放在这里，于是我们将它放在了第一个 page 下的单独一个 layer 中，其他用法则没有什么区别。1234567891011121314151617181920212223242526272829&lt;amp-story standalone&gt; &lt;amp-analytics type=&quot;googleanalytics&quot; id=&quot;analytics&quot;&gt; &lt;script type=&quot;application/json&quot; data-ignore=&quot;true&quot;&gt; &#123; &quot;vars&quot;: &#123; &quot;account&quot;: &quot;UA-xxxxxxxx-x&quot; &#125;, &quot;triggers&quot;: &#123; &quot;default pageview&quot;: &#123; &quot;on&quot;: &quot;visible&quot;, &quot;request&quot;: &quot;pageview&quot;, &quot;vars&quot;: &#123; &quot;title&quot;: &quot;&#123;&#123; page.title | safe &#125;&#125;&quot; &#125;, &#125; &#125; &#125; &lt;/script&gt; &lt;/amp-analytics&gt; &lt;amp-story-page id=&quot;page1&quot; class=&quot;page&quot; auto-advance-after=&quot;video1&quot;&gt; &lt;amp-story-grid-layer template=&quot;fill&quot; &gt; &lt;!-- invisible things --&gt; &lt;amp-install-serviceworker src=&quot;https://m.webnovel.com/sw.js&quot; data-iframe-src=&quot;https://m.webnovel.com/installServiceWorker&quot; layout=&quot;nodisplay&quot;&gt;&lt;/amp-install-serviceworker&gt; &lt;!-- invisible things end --&gt; &lt;/amp-story-grid-layer&gt; ... &lt;/amp-story-page&gt; ...&lt;/amp-story&gt; amp-story-bookend 小技巧 是 AMP Story 的结束页组件，当用户播放完所有的 page 后，就会看到这样一个弹层，将用户引流到相关的链接、引导用户分享等等。这个弹层的样式和交互是固定的，我们需要通过一个 json 来定制其内容。官方的使用案例是外链一个 json 文件：1&lt;amp-story-bookend src=&quot;path/to/my/bookend.json&quot;&gt;&lt;/amp-story-bookend&gt; 但将这样一个最多只有十几行的 json 单独提取一个页面，我的内心是拒绝的，毕竟文件的管理、缓存、更新都更加麻烦。其实官方也实现了内嵌的写法，只是并未在文档中特意指出，具体可以查看这个 issue。于是我们可以愉快的这样写⤵️，如果是服务端渲染，还可以用代码生成相关内容。12345&lt;amp-story-bookend&gt; &lt;script type=&quot;application/json&quot;&gt; /* bookend JSON goes here */ &lt;/script&gt;&lt;/amp-story-bookend&gt; 善用模板 如果你的大量内容形式趋同，大可以通过模板抽离出可复用的框架，定制其中的样式、动画组合、资源内容等等，减少样板代码。 最佳实践经验完成一个 AMP Story 是十分简单的事情。但是要做一个出色的 story 却并不简单。AMP 团队给出了一些关于 AMP Story 的最佳实践，结合我们自身的经验，可以大致从这四个方向来优化。 沉浸式体验 「Space Photos of The Week by the Wired」 沉浸式体验的一般做法就是全屏。比起只在页面中划分一小块来展示图片或者视频，全屏能展示更多细节、减少干扰，让用户集中注意力。 当页面的主要资源是视频时，可以自动播放视频。如果是连续的视频，可以在播放结束时自动切换至下一页。 易于阅读 「The Amazon Gold Rush by the Atlantic」 确保中心突出、文字简练。突出关键信息（如标题）的方式很多，比如为文字单独加上背景颜色。 正文字体大小应不小于浏览器推荐的最小字体 16px。 注意图文的关联性。 在背景是图片或视频的前提下，可以在中间放置一个蒙层，保证文字阅读不受影响杂乱背景的干扰。 注重弱网体验 提供视频的首帧作为 poster，同时从中截取主色作为该页的背景色，这是为了让页面上的文字保证可读，同时让整个加载过程流畅过渡。 每页视频一般不超过 10s、4Mb，否则可能导致过长的加载时间。 体验的丰富性和整体的协调性 「beyonce-rule-the-world by USA today」 一方面，我们可以加上动画来使页面更加动感、富有韵律，或者通过视频实现一些创意效果，给人留下深刻的印象。另一方面，我们不应该滥用动画，一股脑地把能加的东西都加进来而不考虑协调性自然是不可取的操作。如果觉得难以把握这个度，可以向设计师寻求帮助。或者参考 AMP story 主页上的优秀案例。 实用工具AMP Story 从形式上强制优化阅读体验，促使内容生产者创造出更加直观、生动的内容，而不仅仅只依靠文字。但是对开发者来说，有限的施展空间导致 AMP Story 的开发偏向模式化。因此，我们可以使用一些 AMP Story 的辅助工具来加速其生产流程。 makestories.io ：这个网站提供许多 AMP Story 的模板，支持可视化制作 AMP Story，解放程序员的🤲。 Wordpress 插件：同上，可以可视化制作 AMP Story。 Jumprope：制作步骤类型的视频，可作为 AMP Story 的素材。 Unfold：制作图片、文字拼贴，可作为 AMP Story 的素材。 AMP Story 的更多可能性AMP 团队也在不断为 AMP Story 添砖加瓦，让它具备更多可能性。下面是一些笔者觉得很赞的点： Localization：将你的内容语言自动翻译成其他国家的语言，并适应其语言方向（比如阿拉伯语就是从右到左的）。 sidebar：加强跟主页联系，AMP Story 不再是一个孤立的页面。 内嵌第三方插件：例如 Twitter 内嵌、Google Map 内嵌、Youtube 视频内嵌等等，一个线下实体店铺推荐的 story 就可以加入 Google Map 内嵌。 附件：给部分 page 一个了解更多的下拉选项，即可加载非 AMP Story 页面的内容。 Google Search 中的优化：在 Google Search中开辟了新的位置专门用于展示 AMP Story，生态的构建也是十分重要的一环。 amp-story-ad：AMP Story 独有的广告组件，作为单独的一个 page 插入在 story 中，兼顾了体验上的无缝、和谐。你看，AMP 团队甚至考虑到了广告，可见其打造生态闭环的野心。 总结作为 AMP Story 的消费者，用户可以获得更加丰富的体验。而作为 AMP Story 的 publisher，AMP Story 完全可以让我们集中于内容的创造，减少了大量开发的成本。我们无需考虑组件的实现方式、各种屏幕下的内容完整程度、不需要再手动集成分享的功能，只需要在 AMP 最佳实践的基础上，致力于真正的目标。而 AMP Story 日渐完善的生态，包括 SEO 的红利和其广告收益也都十分值得我们去尝试。]]></content>
@@ -48,8 +61,8 @@
       </categories>
       <tags>
         <tag>用户体验</tag>
-        <tag>Webnovel</tag>
         <tag>性能优化</tag>
+        <tag>Webnovel</tag>
       </tags>
   </entry>
   <entry>
@@ -73,9 +86,9 @@
         <category>Hybrid</category>
       </categories>
       <tags>
+        <tag>用户体验</tag>
         <tag>Hybrid</tag>
         <tag>App</tag>
-        <tag>用户体验</tag>
         <tag>Webnovel</tag>
       </tags>
   </entry>
@@ -87,12 +100,12 @@
         <category>UI</category>
       </categories>
       <tags>
-        <tag>无障碍访问</tag>
-        <tag>用户体验</tag>
         <tag>LuLu</tag>
         <tag>UI</tag>
         <tag>屏幕阅读器</tag>
+        <tag>无障碍访问</tag>
         <tag>框架</tag>
+        <tag>用户体验</tag>
         <tag>键盘</tag>
       </tags>
   </entry>
@@ -130,8 +143,8 @@
       </categories>
       <tags>
         <tag>Mobile</tag>
-        <tag>VoiceOver</tag>
         <tag>无障碍访问</tag>
+        <tag>VoiceOver</tag>
         <tag>html</tag>
       </tags>
   </entry>
