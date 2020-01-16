@@ -1328,6 +1328,7 @@ a.article-title:hover {
   font-size: 10px;
   line-height: 17px;
   color: #abb3c0;
+  margin-right: 10px;
 }
 #footer-info {
   line-height: 1.6em;
